@@ -14,3 +14,8 @@ General:
 
 Language support:
 - JSON identifiers are now given the fruity accent color rather than the leaf green (string) accent color
+
+## v0.1.2
+General:
+- fixed extension icon not showing
+- added keywords to pack for better searchability 
