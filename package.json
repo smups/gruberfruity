@@ -1,0 +1,42 @@
+{
+    "name": "gruber_fruity",
+    "displayName": "Gruber Fruity Theme Pack",
+    "description": "minimalist fruity light and dark themes inspired by Gruber",
+    "version": "0.1.0",
+    "engines": {
+        "vscode": "^1.66.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "markdown": "standard",
+    "contributes": {
+        "themes": [
+            {
+                "label": "Gruber Cherry Light 🍒",
+                "uiTheme": "vs",
+                "path": "./themes/Gruber Cherry Light 🍒.json"
+            },
+            {
+                "label": "Gruber Blueberry Dark 🫐",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Gruber Blueberry Dark 🫐.json"
+            },
+            {
+                "label": "Gruber Orange Light 🍊",
+                "uiTheme": "vs",
+                "path": "./themes/Gruber Orange Light 🍊.json"
+            },
+            {
+                "label": "Gruber Lemon Dark 🍋",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Gruber Lemon Dark 🍋.json"
+            },
+            {
+                "label": "Gruber Peach Dark 🍑",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Gruber Peach Dark 🍑.json"
+            }
+        ]
+    }
+}

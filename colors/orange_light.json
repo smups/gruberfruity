@@ -1,0 +1,15 @@
+{
+    "name": "Gruber Orange",
+    "emoji": "🍊",
+    "base": "light",
+    "colors": {
+        "__fruity_accent__": "#ff8000",
+        "__leaf_green__": "#5caf21",
+        "__sky_blue__": "#0088ff",
+        "__comment__": "#6b6b6b",
+        "__dead_wood__": "#938bb7",
+        "__text_default__": "#181818",
+        "__background_default__": "#fefefe",
+        "__background_variant__": "#efefef"
+    }    
+}

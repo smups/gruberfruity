@@ -1,0 +1,302 @@
+{
+	"name": __name__,
+	"colors": {
+		// Base colors
+		"foreground": __text_default__,
+		"icon.foreground": __fruity_accent__,
+		"sash.hoverBorder": __fruity_accent__,
+		"focusBorder": __fruity_accent__,
+		
+		//Text colors
+		"textCodeBlock.background": __background_default__,
+		"textLink.foreground": __fruity_accent__,
+		"textLink.activeForeground": __leaf_green__,
+
+		// Activity bar
+		"activityBar.background": __background_default__,
+		"activityBar.activeBorder": __fruity_accent__,
+		"activityBar.foreground": __fruity_accent__,
+		"activityBar.inactiveForeground": __text_default__,
+
+
+		// Toolbar
+
+		// Buttons
+		"button.background": __fruity_accent__,
+		"button.foreground": __background_default__,
+		"button.hoverBackground": __fruity_accent__,
+		"checkbox.background": __background_default__,
+		"checkbox.border": __fruity_accent__,
+		"checkbox.foreground": __fruity_accent__,
+
+		// Badge
+		"badge.background": __fruity_accent__,
+		"badge.foreground": __background_default__,
+
+		// Side Bar
+		"sideBar.background": __background_variant__,
+		"sideBarSectionHeader.foreground": __fruity_accent__,
+		"sideBarSectionHeader.background": __background_variant__,
+
+		// Lists
+		"list.activeSelectionBackground": __fruity_accent__,
+		"list.activeSelectionForeground": __background_default__,
+		"list.activeSelectionIconForeground": __background_default__,
+		"list.focusHighlightForeground": __background_default__,
+		"list.highlightForeground": __fruity_accent__,
+
+		// Editor colors
+		"editor.background": __background_default__,
+		"editor.foreground": __text_default__,
+		"editorLineNumber.foreground": __comment__,
+		"editorLineNumber.activeForeground": __fruity_accent__,
+		"editorCursor.foreground": __fruity_accent__,
+		"editor.selectionBackground": "#cccccc22",
+
+		// Editor widget colors
+		"editorSuggestWidget.highlightForeground": __fruity_accent__,
+		"editorSuggestWidget.focusHighlightForeground": __background_default__,
+		"editorSuggestWidget.highlightForeground": __fruity_accent__,
+
+		// Editor gutter
+		"editorGutter.modifiedBackground": __fruity_accent__,
+		"editorGutter.addedBackground": __leaf_green__,
+		"editorGutter.deletedBackground": __fruity_accent__,
+
+		// Diff editor
+		"diffEditorGutter.insertedLineBackground": __leaf_green__,
+
+		// Status bar
+		"statusBar.background": __fruity_accent__,
+		"statusBar.foreground": __background_default__,
+		"statusBar.debuggingBackground": __leaf_green__,
+
+		// Breadcrumbs
+		"breadcrumb.focusForeground": __fruity_accent__,
+		"breadcrumb.activeSelectionForeground": __leaf_green__
+	},
+	"tokenColors": [
+		{
+			"name": "Brackets",
+			"scope": [
+				"punctuation.brackets.curly"
+			],
+			"settings": {
+				"foreground": __text_default__
+				/* 
+					There were some issues with macro definitions wronly
+					coloring curly brackets
+				*/
+			}
+		},
+		{
+			"name": "Comment",
+			"scope": [
+				//base (works with rust)
+				"comment",
+				"punctuation.definition.comment"
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": __comment__
+			}
+		},
+		{
+			"name": "Keywords",
+			"scope": [
+				//base (works with rust)
+				"keyword.control",
+				"keyword.other",
+				"keyword.operator.new",
+				"storage.modifier",
+				"storage.type"
+			],
+			"settings": {
+				"foreground": __fruity_accent__,
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "Operators, symbols and builtin types",
+			"scope": [
+				//base (works with rust)
+				"keyword.operator",
+				"keyword.operator.arithmetic",
+				"keyword.operator.assignment",
+				"keyword.operator.logical",
+				"entity.name.type.primitive",
+				"entity.name.type.numeric",
+				//java additions
+				"storage.type.primitive"
+			],
+			"settings": {
+				"foreground": __fruity_accent__,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "String",
+			"scope": [
+				"string"
+			],
+			"settings": {
+				"foreground": __leaf_green__,
+			}
+		},
+		{
+			"name": "Constants, numbers and internals",
+			"scope": [
+				//base (works with rust)
+				"constant",
+				//java additions
+				"variable.other.constant"
+			],
+			"settings": {
+				"foreground": __dead_wood__
+			}
+		},
+		{
+			"name": "self and super",
+			"scope": [
+				//base (works with rust)
+				"variable.language.self",
+				"variable.language.super",
+				//java additions
+				"variable.language.this",
+				//python additions
+				"variable.language.special.self",
+				"variable.parameter.function.language.special.self",
+				"variable.language.special.cls",
+				"variable.parameter.function.language.special.cls"
+			],
+			"settings": {
+				"foreground": __leaf_green__,
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name":"Metaprogramming",
+			"scope": [
+				"meta.attribute",
+				"meta.macro"
+			],
+			"settings":{
+				"foreground":__sky_blue__
+			}
+		},
+		/*
+			[RUST-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "Rust metavariable",
+			"scope": "variable.other.metavariable.name",
+			"settings": {
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "Rust metavariable type identifier",
+			"scope": "variable.other.metavariable.specifier",
+			"settings": {
+				"foreground": __fruity_accent__,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "Types",
+			"scope": [
+				"entity.name.type"
+			],
+			"settings": {
+				"fontStyle": "underline"
+			}
+		},
+		{
+			"name": "Rust Result",
+			"scope": [
+				"entity.name.type.result",
+				"entity.name.type.option"
+			],
+			"settings": {
+				"foreground": __fruity_accent__,
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "Rust lifetime",
+			"scope": "entity.name.type.lifetime",
+			"settings": {
+				"foreground": __dead_wood__,
+				"fontStyle": ""
+			}
+		},
+		/*
+			[PYTHON-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "Python magic",
+			"scope": [
+				"support.variable.magic.python",
+				"support.function.magic.python"
+			],
+			"settings": {
+				"foreground": __sky_blue__,
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "Python function decorators",
+			"scope": "meta.function.decorator.python",
+			"settings": {
+				"foreground": __fruity_accent__,
+				"fontStyle": "bold"
+			}
+		},
+		/*
+			[C/C++-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "C/C++ hex notation fix",
+			"scope": "keyword.other.unit.hexadecimal",
+			"settings": {
+				"foreground": __dead_wood__,
+				"fontStyle": ""
+			}
+		},
+		/*
+			[MARKUP-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "Markup headers",
+			"scope": ["markup.heading"],
+			"settings": {
+				"foreground": __fruity_accent__,
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "Markup italic",
+			"scope": "markup.italic",
+			"settings": {
+				"foreground": __dead_wood__,
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "Markup Bold",
+			"scope": "markup.bold",
+			"settings": {
+				"foreground": __dead_wood__,
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "Markup quote",
+			"scope": "markup.quote",
+			"settings": {
+				"foreground": __fruity_accent__,
+				"fontStyle": ""
+			}
+		}
+	]
+}
