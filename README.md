@@ -35,8 +35,8 @@ _**Variant:** Light, **Accent color**:_ #ff8000
 ![](./screenshots/Orange%20Light.png)
 
 ## **🫐 Gruber Blueberry Dark**
-_**Variant:** Dark, **Accent color**:_ #9500ff
-![](./screenshots/Blueberry%20dark.png)
+_**Variant:** Dark, **Accent color**:_ #8080ff
+![](./screenshots/Blueberry%20Dark.png)
 
 ## **🍒 Gruber Cherry Light**
 _**Variant:** Light, **Accent color**:_ #d61e4c
