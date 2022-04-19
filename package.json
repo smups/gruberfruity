@@ -4,13 +4,21 @@
     "description": "minimalist fruity light and dark themes inspired by Gruber",
     "version": "0.1.1",
     "publisher": "rw-smups",
-    "logo": "./logo/logo.png",
+    "icon": "./icon.png",
     "repository": {"url": "https://github.com/smups/gruberfruity"},
     "engines": {
         "vscode": "^1.66.0"
     },
     "categories": [
         "Themes"
+    ],
+    "keywords": [
+        "gruber",
+        "fruity",
+        "minimalist",
+        "minimal",
+        "yellow",
+        "high contrast"
     ],
     "markdown": "standard",
     "contributes": {
