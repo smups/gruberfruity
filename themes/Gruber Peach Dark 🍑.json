@@ -1,78 +1,78 @@
 {
-	"name":  "Gruber Blueberry Dark 🫐" ,
+	"name":  "Gruber Peach Dark 🍑" ,
 	"colors": {
 		// Base colors
 		"foreground":  "#dddddd" ,
-		"icon.foreground":  "#8080ff" ,
-		"sash.hoverBorder":  "#8080ff" ,
-		"focusBorder":  "#8080ff" ,
+		"icon.foreground":  "#f55d42" ,
+		"sash.hoverBorder":  "#f55d42" ,
+		"focusBorder":  "#f55d42" ,
 		
 		//Text colors
 		"textCodeBlock.background":  "#181818" ,
-		"textLink.foreground":  "#8080ff" ,
+		"textLink.foreground":  "#f55d42" ,
 		"textLink.activeForeground":  "#73c936" ,
 
 		// Activity bar
 		"activityBar.background":  "#181818" ,
-		"activityBar.activeBorder":  "#8080ff" ,
-		"activityBar.foreground":  "#8080ff" ,
+		"activityBar.activeBorder":  "#f55d42" ,
+		"activityBar.foreground":  "#f55d42" ,
 		"activityBar.inactiveForeground":  "#dddddd" ,
 
 
 		// Toolbar
 
 		// Buttons
-		"button.background":  "#8080ff" ,
+		"button.background":  "#f55d42" ,
 		"button.foreground":  "#181818" ,
-		"button.hoverBackground":  "#8080ff" ,
+		"button.hoverBackground":  "#f55d42" ,
 		"checkbox.background":  "#181818" ,
-		"checkbox.border":  "#8080ff" ,
-		"checkbox.foreground":  "#8080ff" ,
+		"checkbox.border":  "#f55d42" ,
+		"checkbox.foreground":  "#f55d42" ,
 
 		// Badge
-		"badge.background":  "#8080ff" ,
+		"badge.background":  "#f55d42" ,
 		"badge.foreground":  "#181818" ,
 
 		// Side Bar
 		"sideBar.background":  "#282828" ,
-		"sideBarSectionHeader.foreground":  "#8080ff" ,
+		"sideBarSectionHeader.foreground":  "#f55d42" ,
 		"sideBarSectionHeader.background":  "#282828" ,
 
 		// Lists
-		"list.activeSelectionBackground":  "#8080ff" ,
+		"list.activeSelectionBackground":  "#f55d42" ,
 		"list.activeSelectionForeground":  "#181818" ,
 		"list.activeSelectionIconForeground":  "#181818" ,
 		"list.focusHighlightForeground":  "#181818" ,
-		"list.highlightForeground":  "#8080ff" ,
+		"list.highlightForeground":  "#f55d42" ,
 
 		// Editor colors
 		"editor.background":  "#181818" ,
 		"editor.foreground":  "#dddddd" ,
 		"editorLineNumber.foreground":  "#6b6b6b" ,
-		"editorLineNumber.activeForeground":  "#8080ff" ,
-		"editorCursor.foreground":  "#8080ff" ,
+		"editorLineNumber.activeForeground":  "#f55d42" ,
+		"editorCursor.foreground":  "#f55d42" ,
 		"editor.selectionBackground": "#cccccc22",
 
 		// Editor widget colors
-		"editorSuggestWidget.highlightForeground":  "#8080ff" ,
+		"editorSuggestWidget.highlightForeground":  "#f55d42" ,
 		"editorSuggestWidget.focusHighlightForeground":  "#181818" ,
-		"editorSuggestWidget.highlightForeground":  "#8080ff" ,
+		"editorSuggestWidget.highlightForeground":  "#f55d42" ,
 
 		// Editor gutter
-		"editorGutter.modifiedBackground":  "#8080ff" ,
+		"editorGutter.modifiedBackground":  "#f55d42" ,
 		"editorGutter.addedBackground":  "#73c936" ,
-		"editorGutter.deletedBackground":  "#8080ff" ,
+		"editorGutter.deletedBackground":  "#f55d42" ,
 
 		// Diff editor
 		"diffEditorGutter.insertedLineBackground":  "#73c936" ,
 
 		// Status bar
-		"statusBar.background":  "#8080ff" ,
+		"statusBar.background":  "#f55d42" ,
 		"statusBar.foreground":  "#181818" ,
 		"statusBar.debuggingBackground":  "#73c936" ,
 
 		// Breadcrumbs
-		"breadcrumb.focusForeground":  "#8080ff" ,
+		"breadcrumb.focusForeground":  "#f55d42" ,
 		"breadcrumb.activeSelectionForeground":  "#73c936" 
 	},
 	"tokenColors": [
@@ -112,7 +112,7 @@
 				"storage.type"
 			],
 			"settings": {
-				"foreground":  "#8080ff" ,
+				"foreground":  "#f55d42" ,
 				"fontStyle": "bold"
 			}
 		},
@@ -130,7 +130,7 @@
 				"storage.type.primitive"
 			],
 			"settings": {
-				"foreground":  "#8080ff" ,
+				"foreground":  "#f55d42" ,
 				"fontStyle": ""
 			}
 		},
@@ -198,7 +198,7 @@
 			"name": "Rust metavariable type identifier",
 			"scope": "variable.other.metavariable.specifier",
 			"settings": {
-				"foreground":  "#8080ff" ,
+				"foreground":  "#f55d42" ,
 				"fontStyle": ""
 			}
 		},
@@ -218,7 +218,7 @@
 				"entity.name.type.option"
 			],
 			"settings": {
-				"foreground":  "#8080ff" ,
+				"foreground":  "#f55d42" ,
 				"fontStyle": "bold"
 			}
 		},
@@ -248,7 +248,7 @@
 			"name": "Python function decorators",
 			"scope": "meta.function.decorator.python",
 			"settings": {
-				"foreground":  "#8080ff" ,
+				"foreground":  "#f55d42" ,
 				"fontStyle": "bold"
 			}
 		},
@@ -270,7 +270,7 @@
 			"name": "Markup headers",
 			"scope": ["markup.heading"],
 			"settings": {
-				"foreground":  "#8080ff" ,
+				"foreground":  "#f55d42" ,
 				"fontStyle": "bold"
 			}
 		},
@@ -294,7 +294,7 @@
 			"name": "Markup quote",
 			"scope": "markup.quote",
 			"settings": {
-				"foreground":  "#8080ff" ,
+				"foreground":  "#f55d42" ,
 				"fontStyle": ""
 			}
 		},
@@ -305,7 +305,7 @@
 			"name": "JSON property name",
 			"scope": "support.type.property-name.json",
 			"settings": {
-				"foreground":  "#8080ff" 
+				"foreground":  "#f55d42" 
 			}
 		}
 	]

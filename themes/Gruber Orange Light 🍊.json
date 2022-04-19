@@ -297,6 +297,16 @@
 				"foreground":  "#ff8000" ,
 				"fontStyle": ""
 			}
+		},
+		/*
+			[JSON-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "JSON property name",
+			"scope": "support.type.property-name.json",
+			"settings": {
+				"foreground":  "#ff8000" 
+			}
 		}
 	]
 }
