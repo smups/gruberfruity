@@ -48,16 +48,16 @@ _**Variant:** Light, **Accent color**:_ #d61e4c
 
 ## **🍑 Gruber Peach Dark**
 _**Variant:** Dark, **Accent color**:_ #fc8d6e
-![](./screenshots/Lemon%20Dark.png)
+![](./screenshots/Peach%20Dark.png)
 
 ## **🫒 Gruber Olive Light**
 _**Variant:** Light, **Accent color**:_ #6d8c12
-![](./screenshots/Orange%20Light.png)
+![](./screenshots/Olive%20Light.png)
 
 ## **🍐 Gruber Pear Dark**
 _**Variant:** Dark, **Accent color**:_ #deff0a
-![](./screenshots/Blueberry%20Dark.png)
+![](./screenshots/Pear%20Dark.png)
 
 ## **🍎 Gruber Apple Light**
 _**Variant:** Light, **Accent color**:_ #ff0a0a
-![](./screenshots/Cherry%20Light.png)
+![](./screenshots/Apple%20Light.png)
