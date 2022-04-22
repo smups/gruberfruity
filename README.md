@@ -25,6 +25,10 @@ All theme variants feature enhanced syntax highlighting (more sensible colors) s
 - [🍊 Gruber Orange Light](#🍊-gruber-orange-light)
 - [🫐 Gruber Blueberry Dark](#🫐-gruber-blueberry-dark)
 - [🍒 Gruber Cherry Light](#🍒-gruber-cherry-light)
+- [🍑 Gruber Peach Dark](#🍑-gruber-peach-dark)
+- [🫒 Gruber Olive Light](#🫒-gruber-olive-light)
+- [🍐 Gruber Pear Dark](#🍐-gruber-pear-dark)
+- [🍎 Gruber Apple Light](#🍎-gruber-apple-light)
 
 ## **🍋 Gruber Lemon Dark**
 _**Variant:** Dark, **Accent color**:_ #ffd900
@@ -40,4 +44,20 @@ _**Variant:** Dark, **Accent color**:_ #8080ff
 
 ## **🍒 Gruber Cherry Light**
 _**Variant:** Light, **Accent color**:_ #d61e4c
+![](./screenshots/Cherry%20Light.png)
+
+## **🍑 Gruber Peach Dark**
+_**Variant:** Dark, **Accent color**:_ #fc8d6e
+![](./screenshots/Lemon%20Dark.png)
+
+## **🫒 Gruber Olive Light**
+_**Variant:** Light, **Accent color**:_ #6d8c12
+![](./screenshots/Orange%20Light.png)
+
+## **🍐 Gruber Pear Dark**
+_**Variant:** Dark, **Accent color**:_ #deff0a
+![](./screenshots/Blueberry%20Dark.png)
+
+## **🍎 Gruber Apple Light**
+_**Variant:** Light, **Accent color**:_ #ff0a0a
 ![](./screenshots/Cherry%20Light.png)

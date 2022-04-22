@@ -28,6 +28,26 @@
     "contributes": {
         "themes": [
             {
+                "label": "Gruber Apple Light 🍎",
+                "uiTheme": "vs",
+                "path": "./themes/Gruber Apple Light 🍎.json"
+            },
+            {
+                "label": "Gruber Pear Dark 🍐",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Gruber Pear Dark 🍐.json"
+            },
+            {
+                "label": "Gruber Olive Light 🫒",
+                "uiTheme": "vs",
+                "path": "./themes/Gruber Olive Light 🫒.json"
+            },
+            {
+                "label": "Gruber Peach Dark 🍑",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Gruber Peach Dark 🍑.json"
+            },
+            {
                 "label": "Gruber Cherry Light 🍒",
                 "uiTheme": "vs",
                 "path": "./themes/Gruber Cherry Light 🍒.json"
@@ -46,11 +66,6 @@
                 "label": "Gruber Lemon Dark 🍋",
                 "uiTheme": "vs-dark",
                 "path": "./themes/Gruber Lemon Dark 🍋.json"
-            },
-            {
-                "label": "Gruber Peach Dark 🍑",
-                "uiTheme": "vs-dark",
-                "path": "./themes/Gruber Peach Dark 🍑.json"
             }
         ]
     }
