@@ -1,0 +1,345 @@
+{
+	"name": "Gruber Cherry Light 🍒",
+	"colors": {
+		// Base colors
+		"foreground":  "#181818" ,
+		"icon.foreground":  "#6d8c12" ,
+		"sash.hoverBorder":  "#6d8c12" ,
+		"focusBorder":  "#6d8c12" ,
+		
+		//Text colors
+		"textCodeBlock.background":  "#fefefe" ,
+		"textLink.foreground":  "#6d8c12" ,
+		"textLink.activeForeground":  "#a21581" ,
+
+		// Activity bar
+		"activityBar.background":  "#fefefe" ,
+		"activityBar.activeBorder":  "#6d8c12" ,
+		"activityBar.foreground":  "#6d8c12" ,
+		"activityBar.inactiveForeground":  "#181818" ,
+
+
+		// Toolbar
+
+		// Buttons
+		"button.background":  "#6d8c12" ,
+		"button.foreground":  "#fefefe" ,
+		"button.hoverBackground":  "#6d8c12" ,
+		"checkbox.background":  "#fefefe" ,
+		"checkbox.border":  "#6d8c12" ,
+		"checkbox.foreground":  "#6d8c12" ,
+
+		// Badge
+		"badge.background":  "#6d8c12" ,
+		"badge.foreground":  "#fefefe" ,
+
+		// Side Bar
+		"sideBar.background":  "#efefef" ,
+		"sideBarSectionHeader.foreground":  "#6d8c12" ,
+		"sideBarSectionHeader.background":  "#efefef" ,
+
+		// Lists
+		"list.activeSelectionBackground":  "#6d8c12" ,
+		"list.activeSelectionForeground":  "#fefefe" ,
+		"list.activeSelectionIconForeground":  "#fefefe" ,
+		"list.focusHighlightForeground":  "#fefefe" ,
+		"list.highlightForeground":  "#6d8c12" ,
+
+		// Editor colors
+		"editor.background":  "#fefefe" ,
+		"editor.foreground":  "#181818" ,
+		"editorLineNumber.foreground":  "#6b6b6b" ,
+		"editorLineNumber.activeForeground":  "#6d8c12" ,
+		"editorCursor.foreground":  "#6d8c12" ,
+		"editor.selectionBackground": "#18181822",
+
+		// Editor widget colors
+		"editorSuggestWidget.highlightForeground":  "#6d8c12" ,
+		"editorSuggestWidget.focusHighlightForeground":  "#fefefe" ,
+		"editorSuggestWidget.highlightForeground":  "#6d8c12" ,
+
+		// Editor gutter
+		"editorGutter.modifiedBackground":  "#6d8c12" ,
+		"editorGutter.addedBackground":  "#a21581" ,
+		"editorGutter.deletedBackground":  "#6d8c12" ,
+
+		// Diff editor
+		"diffEditorGutter.insertedLineBackground":  "#a21581" ,
+
+		// Status bar
+		"statusBar.background":  "#6d8c12" ,
+		"statusBar.foreground":  "#fefefe" ,
+		"statusBar.debuggingBackground":  "#a21581" ,
+
+		// Breadcrumbs
+		"breadcrumb.focusForeground":  "#6d8c12" ,
+		"breadcrumb.activeSelectionForeground":  "#a21581" 
+	},
+	"tokenColors": [
+		{
+			"name": "Brackets",
+			"scope": [
+				"punctuation.brackets.curly"
+			],
+			"settings": {
+				"foreground":  "#181818" 
+				/* 
+					There were some issues with macro definitions wronly
+					coloring curly brackets
+				*/
+			}
+		},
+		{
+			"name": "Comment",
+			"scope": [
+				//base (works with rust)
+				"comment",
+				"punctuation.definition.comment"
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground":  "#6b6b6b" 
+			}
+		},
+		{
+			"name": "Keywords",
+			"scope": [
+				//base (works with rust)
+				"keyword.control",
+				"keyword.other",
+				"keyword.operator.new",
+				"storage.modifier",
+				"storage.type",
+				//java additions
+				"keyword.operator.instanceof.java"
+			],
+			"settings": {
+				"foreground":  "#6d8c12" ,
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "Operators, symbols and builtin types",
+			"scope": [
+				//base (works with rust)
+				"keyword.operator",
+				"keyword.operator.arithmetic",
+				"keyword.operator.assignment",
+				"keyword.operator.logical",
+				"entity.name.type.primitive",
+				"entity.name.type.numeric",
+				//java additions
+				"storage.type.primitive"
+			],
+			"settings": {
+				"foreground":  "#6d8c12" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "String",
+			"scope": [
+				"string"
+			],
+			"settings": {
+				"foreground":  "#a21581" ,
+			}
+		},
+		{
+			"name": "Constants, numbers and internals",
+			"scope": [
+				//base (works with rust)
+				"constant",
+				//java additions
+				"variable.other.constant"
+			],
+			"settings": {
+				"foreground":  "#938bb7" 
+			}
+		},
+		{
+			"name": "self and super",
+			"scope": [
+				//base (works with rust)
+				"variable.language.self",
+				"variable.language.super",
+				//java additions
+				"variable.language.this",
+				//python additions
+				"variable.language.special.self",
+				"variable.parameter.function.language.special.self",
+				"variable.language.special.cls",
+				"variable.parameter.function.language.special.cls"
+			],
+			"settings": {
+				"foreground":  "#a21581" ,
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name":"Metaprogramming",
+			"scope": [
+				"meta.attribute",
+				"meta.macro"
+			],
+			"settings":{
+				"foreground": "#0088ff" 
+			}
+		},
+		{
+			"name": "Types",
+			"scope": [
+				//General
+				"entity.name.type",
+				//java additions
+				"entity.other.inherited-class",
+				"storage.type.java",
+				"storage.type.generic.java",
+				"storage.type.object.array.java"
+			],
+			"settings": {
+				"fontStyle": "underline",
+				"foreground":  "#181818" 
+			}
+		},
+		/*
+			[RUST-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "Rust metavariable",
+			"scope": "variable.other.metavariable.name",
+			"settings": {
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "Rust metavariable type identifier",
+			"scope": "variable.other.metavariable.specifier",
+			"settings": {
+				"foreground":  "#6d8c12" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "Rust Result",
+			"scope": [
+				"entity.name.type.result",
+				"entity.name.type.option"
+			],
+			"settings": {
+				"foreground":  "#6d8c12" ,
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "Rust lifetime",
+			"scope": "entity.name.type.lifetime",
+			"settings": {
+				"foreground":  "#938bb7" ,
+				"fontStyle": ""
+			}
+		},
+		/*
+			[PYTHON-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "Python magic",
+			"scope": [
+				"support.variable.magic.python",
+				"support.function.magic.python"
+			],
+			"settings": {
+				"foreground":  "#0088ff" ,
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "Python function decorators",
+			"scope": "meta.function.decorator.python",
+			"settings": {
+				"foreground":  "#6d8c12" ,
+				"fontStyle": "bold"
+			}
+		},
+		/*
+			[C/C++-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "C/C++ hex notation fix",
+			"scope": "keyword.other.unit.hexadecimal",
+			"settings": {
+				"foreground":  "#938bb7" ,
+				"fontStyle": ""
+			}
+		},
+		/*
+			[JAVA-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "Import fix",
+			"scope": [
+				"storage.modifier.import.java",
+				"storage.modifier.package.java"
+			],
+			"settings": {
+				"foreground":  "#181818" ,
+				"fontStyle": ""
+			}
+		},
+		/*
+			[MARKUP-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "Markup headers",
+			"scope": ["markup.heading"],
+			"settings": {
+				"foreground":  "#6d8c12" ,
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "Markup italic",
+			"scope": "markup.italic",
+			"settings": {
+				"foreground":  "#938bb7" ,
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "Markup Bold",
+			"scope": "markup.bold",
+			"settings": {
+				"foreground":  "#938bb7" ,
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "Markup quote",
+			"scope": "markup.quote",
+			"settings": {
+				"foreground":  "#6d8c12" ,
+				"fontStyle": ""
+			}
+		},
+		/*
+			[JSON-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "JSON property name",
+			"scope": "support.type.property-name.json",
+			"settings": {
+				"foreground":  "#6d8c12" 
+			}
+		},
+		/*
+			[XML-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "XML property name",
+			"scope": "meta.tag.xml",
+			"settings": {
+				"foreground":  "#6d8c12" 
+			}
+		}
+	]
+}
