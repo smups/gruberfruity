@@ -109,7 +109,9 @@
 				"keyword.other",
 				"keyword.operator.new",
 				"storage.modifier",
-				"storage.type"
+				"storage.type",
+				//java additions
+				"keyword.operator.instanceof.java"
 			],
 			"settings": {
 				"foreground":  "#d61e4c" ,
@@ -184,6 +186,22 @@
 				"foreground": "#0088ff" 
 			}
 		},
+		{
+			"name": "Types",
+			"scope": [
+				//General
+				"entity.name.type",
+				//java additions
+				"entity.other.inherited-class",
+				"storage.type.java",
+				"storage.type.generic.java",
+				"storage.type.object.array.java"
+			],
+			"settings": {
+				"fontStyle": "underline",
+				"foreground":  "#181818" 
+			}
+		},
 		/*
 			[RUST-SPECIFIC MODIFICATIONS]
 		*/
@@ -200,15 +218,6 @@
 			"settings": {
 				"foreground":  "#d61e4c" ,
 				"fontStyle": ""
-			}
-		},
-		{
-			"name": "Types",
-			"scope": [
-				"entity.name.type"
-			],
-			"settings": {
-				"fontStyle": "underline"
 			}
 		},
 		{
@@ -264,6 +273,20 @@
 			}
 		},
 		/*
+			[JAVA-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "Import fix",
+			"scope": [
+				"storage.modifier.import.java",
+				"storage.modifier.package.java"
+			],
+			"settings": {
+				"foreground":  "#181818" ,
+				"fontStyle": ""
+			}
+		},
+		/*
 			[MARKUP-SPECIFIC MODIFICATIONS]
 		*/
 		{
@@ -304,6 +327,16 @@
 		{
 			"name": "JSON property name",
 			"scope": "support.type.property-name.json",
+			"settings": {
+				"foreground":  "#d61e4c" 
+			}
+		},
+		/*
+			[XML-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "XML property name",
+			"scope": "meta.tag.xml",
 			"settings": {
 				"foreground":  "#d61e4c" 
 			}

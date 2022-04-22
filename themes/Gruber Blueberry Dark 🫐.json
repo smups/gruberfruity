@@ -184,6 +184,22 @@
 				"foreground": "#00d5ff" 
 			}
 		},
+		{
+			"name": "Types",
+			"scope": [
+				//General
+				"entity.name.type",
+				//java additions
+				"entity.other.inherited-class",
+				"storage.type.java",
+				"storage.type.generic.java",
+				"storage.type.object.array.java"
+			],
+			"settings": {
+				"foreground":  "#dddddd" ,
+				"fontStyle": "underline"
+			}
+		},
 		/*
 			[RUST-SPECIFIC MODIFICATIONS]
 		*/
@@ -200,15 +216,6 @@
 			"settings": {
 				"foreground":  "#8080ff" ,
 				"fontStyle": ""
-			}
-		},
-		{
-			"name": "Types",
-			"scope": [
-				"entity.name.type"
-			],
-			"settings": {
-				"fontStyle": "underline"
 			}
 		},
 		{
@@ -264,6 +271,20 @@
 			}
 		},
 		/*
+			[JAVA-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "Import fix",
+			"scope": [
+				"storage.modifier.import.java",
+				"storage.modifier.package.java"
+			],
+			"settings": {
+				"foreground":  "#dddddd" ,
+				"fontStyle": ""
+			}
+		},
+		/*
 			[MARKUP-SPECIFIC MODIFICATIONS]
 		*/
 		{
@@ -304,6 +325,16 @@
 		{
 			"name": "JSON property name",
 			"scope": "support.type.property-name.json",
+			"settings": {
+				"foreground":  "#8080ff" 
+			}
+		},
+		/*
+			[XML-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "XML property name",
+			"scope": "meta.tag.xml",
 			"settings": {
 				"foreground":  "#8080ff" 
 			}
