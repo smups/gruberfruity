@@ -63,6 +63,12 @@
 		"editorGutter.addedBackground": __leaf_green__,
 		"editorGutter.deletedBackground": __fruity_accent__,
 
+		// Matching bracket colors (boo!)
+		"editorBracketHighlight.foreground1": __text_default__,
+		"editorBracketHighlight.foreground2": __comment__,
+		"editorBracketHighlight.foreground3": __text_default__,
+		"editorBracketHighlight.unexpectedBracket.foreground": __fruity_accent__,
+
 		// Diff editor
 		"diffEditorGutter.insertedLineBackground": __leaf_green__,
 

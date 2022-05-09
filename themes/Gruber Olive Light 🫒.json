@@ -63,6 +63,12 @@
 		"editorGutter.addedBackground":  "#a21581" ,
 		"editorGutter.deletedBackground":  "#6d8c12" ,
 
+		// Matching bracket colors (boo!)
+		"editorBracketHighlight.foreground1":  "#181818" ,
+		"editorBracketHighlight.foreground2":  "#6b6b6b" ,
+		"editorBracketHighlight.foreground3":  "#181818" ,
+		"editorBracketHighlight.unexpectedBracket.foreground":  "#6d8c12" ,
+
 		// Diff editor
 		"diffEditorGutter.insertedLineBackground":  "#a21581" ,
 

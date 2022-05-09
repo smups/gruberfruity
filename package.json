@@ -2,7 +2,7 @@
     "name": "gruberfruity",
     "displayName": "Gruber Fruity Theme Pack",
     "description": "minimalist fruity light and dark themes inspired by Gruber",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "publisher": "rw-smups",
     "icon": "icon.png",
     "repository": {
@@ -11,7 +11,7 @@
     },
     "homepage": "https://github.com/smups/gruberfruity",
     "engines": {
-        "vscode": "^1.66.0"
+        "vscode": "^1.67.0"
     },
     "categories": [
         "Themes"
