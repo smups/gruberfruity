@@ -346,6 +346,17 @@
 			"settings": {
 				"foreground": __fruity_accent__
 			}
+		},
+		/*
+			[TOML-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "TOLM table tag",
+			"scope": "meta.tag.table.toml",
+			"settings": {
+				"foreground": __fruity_accent__,
+				"fontStyle": "bold"
+			}
 		}
 	]
 }

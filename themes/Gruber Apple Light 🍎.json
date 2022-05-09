@@ -346,6 +346,17 @@
 			"settings": {
 				"foreground":  "#ff0a0a" 
 			}
+		},
+		/*
+			[TOML-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "TOLM table tag",
+			"scope": "meta.tag.table.toml",
+			"settings": {
+				"foreground":  "#ff0a0a" ,
+				"fontStyle": "bold"
+			}
 		}
 	]
 }
