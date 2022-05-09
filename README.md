@@ -1,15 +1,22 @@
 # **Gruber Fruity Theme Pack**
-Theme pack with minimalist themes inspired by the original Gruber
+![](https://img.shields.io/visual-studio-marketplace/stars/rw-smups.gruberfruity?style=for-the-badge)
+![](https://img.shields.io/visual-studio-marketplace/d/rw-smups.gruberfruity?style=for-the-badge)
+![](https://img.shields.io/visual-studio-marketplace/v/rw-smups.gruberfruity?style=for-the-badge)
+
+Theme pack with minimalist themes inspired by the original Gruber themes.
+All variants feature a fruity 🫠 and minimalist look, inspired by different
+healthy snacks.
+
 
 ## Style
-themes. All variants feature a fruity 🫠 and minimalist look, inspired by different healthy snacks.
-
 The themes are styled in the same way and consist of the following
 accent colours:
 - fruity color - main accent color for keywords and operators
 - leaf green - accent color for strings and the `self`/`this` and `super` keywords
 - dead wood - accent color for constants and numerics
 - sky blue - accent color for macros and magic functions
+
+All themes support a minimalist version of vscode's new color matched brackets.
 
 ## Language support
 All theme variants feature enhanced syntax highlighting (more sensible colors) support for the following languages:
@@ -18,7 +25,7 @@ All theme variants feature enhanced syntax highlighting (more sensible colors) s
 - C/C++ (WIP)
 - Markdown
 - Java
-- JSON
+- JSON, XML, TOML
 
 # Variants
 - [🍋 Gruber Lemon Dark](#🍋-gruber-lemon-dark)
