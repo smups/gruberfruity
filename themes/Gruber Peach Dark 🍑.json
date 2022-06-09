@@ -76,6 +76,10 @@
 		"statusBar.background":  "#FC8D6E" ,
 		"statusBar.foreground":  "#181818" ,
 		"statusBar.debuggingBackground":  "#73c936" ,
+    "statusBar.noFolderForeground":  "#181818" ,
+    "statusBar.noFolderBackground":  "#FC8D6E" ,
+    "statusBar.remoteBackground":  "#73c936" ,
+    "statusBar.remoteForeground":  "#181818" ,
 
 		// Breadcrumbs
 		"breadcrumb.focusForeground":  "#FC8D6E" ,

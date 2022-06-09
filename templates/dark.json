@@ -76,6 +76,10 @@
 		"statusBar.background": __fruity_accent__,
 		"statusBar.foreground": __background_default__,
 		"statusBar.debuggingBackground": __leaf_green__,
+    "statusBar.noFolderForeground": __background_default__,
+    "statusBar.noFolderBackground": __fruity_accent__,
+    "statusBar.remoteBackground": __leaf_green__,
+    "statusBar.remoteForeground": __background_default__,
 
 		// Breadcrumbs
 		"breadcrumb.focusForeground": __fruity_accent__,
