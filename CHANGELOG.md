@@ -2,6 +2,18 @@
 
 All notable changes to the "gruber fruity" theme pack will be documented here.
 
+## v0.2.2
+Bugfixes/ general theme changes:
+- statusbar now no longer changes color when working on a file without opening a
+directory
+- remote connection indicator in status bar is now coloured with the secondary
+color of the color scheme ("leaf green")
+
+Theme changes:
+- Gruber Pear Dark 🍐: new accent color  #80cf30, is much less jarring than the
+old #deff0a one. Also changed the string color to match the olive theme's string
+color (which is a dark purple) for better readability
+
 ## v0.2.1
 Added support for coloured bracket pairs: matching pairs are now coloured in
 the standard foreground color and the comment colour, sticking with the minimal
