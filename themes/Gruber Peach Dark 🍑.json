@@ -162,7 +162,7 @@
 				"variable.other.constant"
 			],
 			"settings": {
-				"foreground":  "#c795ab" 
+				"foreground":  "#938bb7" 
 			}
 		},
 		{
@@ -247,7 +247,7 @@
 			"name": "Rust lifetime",
 			"scope": "entity.name.type.lifetime",
 			"settings": {
-				"foreground":  "#c795ab" ,
+				"foreground":  "#938bb7" ,
 				"fontStyle": ""
 			}
 		},
@@ -280,7 +280,7 @@
 			"name": "C/C++ hex notation fix",
 			"scope": "keyword.other.unit.hexadecimal",
 			"settings": {
-				"foreground":  "#c795ab" ,
+				"foreground":  "#938bb7" ,
 				"fontStyle": ""
 			}
 		},
@@ -313,7 +313,7 @@
 			"name": "Markup italic",
 			"scope": "markup.italic",
 			"settings": {
-				"foreground":  "#c795ab" ,
+				"foreground":  "#938bb7" ,
 				"fontStyle": "italic"
 			}
 		},
@@ -321,7 +321,7 @@
 			"name": "Markup Bold",
 			"scope": "markup.bold",
 			"settings": {
-				"foreground":  "#c795ab" ,
+				"foreground":  "#938bb7" ,
 				"fontStyle": "bold"
 			}
 		},
