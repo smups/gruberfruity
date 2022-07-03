@@ -2,6 +2,17 @@
 
 All notable changes to the "gruber fruity" theme pack will be documented here.
 
+## v0.3.0
+Language support:
+- Julia now has enhanced highlighting:
+    - Julia type annotations/hints are now highlighted as such
+    - Julia macros are highlighted properly
+
+Theme changes:
+- Gruber Pear Dark 🍐: string color (deadwood) is now a lighter shade of purple (#938bb7)
+- Gruber Apple Light 🍎: reduced accent color contrast with background. New accent: #ff264e
+- Gruber Blueberry Dark 🫐: reduced accent color contrast with background. New accent: #7171e3
+
 ## v0.2.2
 Bugfixes/ general theme changes:
 - statusbar now no longer changes color when working on a file without opening a
