@@ -7,7 +7,6 @@ Theme pack with minimalist themes inspired by the original Gruber themes.
 All variants feature a fruity 🫠 and minimalist look, inspired by different
 healthy snacks.
 
-
 ## Style
 The themes are styled in the same way and consist of the following
 accent colours:
@@ -22,10 +21,17 @@ All themes support a minimalist version of vscode's new color matched brackets.
 All theme variants feature enhanced syntax highlighting (more sensible colors) support for the following languages:
 - Rust
 - Python
-- C/C++ (WIP)
+- Julia
+- C (C++ is still WIP)
 - Markdown
 - Java
 - JSON, XML, TOML
+
+## Fonts
+I recommend you use this extension in combination with a great programming font like:
+- [JetBrains mono](https://www.jetbrains.com/lp/mono/)
+- [FiraCode](https://github.com/tonsky/FiraCode)
+- [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro)
 
 # Variants
 - [🍋 Gruber Lemon Dark](#🍋-gruber-lemon-dark)
@@ -46,7 +52,7 @@ _**Variant:** Light, **Accent color**:_ #ff8000
 ![](./screenshots/Orange%20Light.png)
 
 ## **🫐 Gruber Blueberry Dark**
-_**Variant:** Dark, **Accent color**:_ #8080ff
+_**Variant:** Dark, **Accent color**:_ #7171e3
 ![](./screenshots/Blueberry%20Dark.png)
 
 ## **🍒 Gruber Cherry Light**
@@ -62,9 +68,9 @@ _**Variant:** Light, **Accent color**:_ #6d8c12
 ![](./screenshots/Olive%20Light.png)
 
 ## **🍐 Gruber Pear Dark**
-_**Variant:** Dark, **Accent color**:_ #deff0a
+_**Variant:** Dark, **Accent color**:_ #80cf30
 ![](./screenshots/Pear%20Dark.png)
 
 ## **🍎 Gruber Apple Light**
-_**Variant:** Light, **Accent color**:_ #ff0a0a
+_**Variant:** Light, **Accent color**:_ #ff264e
 ![](./screenshots/Apple%20Light.png)
