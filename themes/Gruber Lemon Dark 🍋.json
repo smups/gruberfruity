@@ -188,7 +188,9 @@
 			"name":"Metaprogramming",
 			"scope": [
 				"meta.attribute",
-				"meta.macro"
+				"meta.macro",
+				//julia additions
+				"support.function.macro"
 			],
 			"settings":{
 				"foreground": "#00d5ff" 
@@ -203,7 +205,9 @@
 				"entity.other.inherited-class",
 				"storage.type.java",
 				"storage.type.generic.java",
-				"storage.type.object.array.java"
+				"storage.type.object.array.java",
+				//julia additions
+				"support.type.julia"
 			],
 			"settings": {
 				"foreground":  "#dddddd" ,

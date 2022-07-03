@@ -162,7 +162,7 @@
 				"variable.other.constant"
 			],
 			"settings": {
-				"foreground":  "#c795ab" 
+				"foreground":  "7070FF" 
 			}
 		},
 		{
@@ -188,7 +188,9 @@
 			"name":"Metaprogramming",
 			"scope": [
 				"meta.attribute",
-				"meta.macro"
+				"meta.macro",
+				//julia additions
+				"support.function.macro"
 			],
 			"settings":{
 				"foreground": "#00d5ff" 
@@ -203,7 +205,9 @@
 				"entity.other.inherited-class",
 				"storage.type.java",
 				"storage.type.generic.java",
-				"storage.type.object.array.java"
+				"storage.type.object.array.java",
+				//julia additions
+				"support.type.julia"
 			],
 			"settings": {
 				"foreground":  "#dddddd" ,
@@ -243,7 +247,7 @@
 			"name": "Rust lifetime",
 			"scope": "entity.name.type.lifetime",
 			"settings": {
-				"foreground":  "#c795ab" ,
+				"foreground":  "7070FF" ,
 				"fontStyle": ""
 			}
 		},
@@ -276,7 +280,7 @@
 			"name": "C/C++ hex notation fix",
 			"scope": "keyword.other.unit.hexadecimal",
 			"settings": {
-				"foreground":  "#c795ab" ,
+				"foreground":  "7070FF" ,
 				"fontStyle": ""
 			}
 		},
@@ -309,7 +313,7 @@
 			"name": "Markup italic",
 			"scope": "markup.italic",
 			"settings": {
-				"foreground":  "#c795ab" ,
+				"foreground":  "7070FF" ,
 				"fontStyle": "italic"
 			}
 		},
@@ -317,7 +321,7 @@
 			"name": "Markup Bold",
 			"scope": "markup.bold",
 			"settings": {
-				"foreground":  "#c795ab" ,
+				"foreground":  "7070FF" ,
 				"fontStyle": "bold"
 			}
 		},
