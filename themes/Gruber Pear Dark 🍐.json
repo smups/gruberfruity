@@ -10,7 +10,7 @@
 		//Text colors
 		"textCodeBlock.background":  "#181818" ,
 		"textLink.foreground":  "#80cf30" ,
-		"textLink.activeForeground":  "#a21581" ,
+		"textLink.activeForeground":  "#CF59AB" ,
 
 		// Activity bar
 		"activityBar.background":  "#181818" ,
@@ -60,7 +60,7 @@
 
 		// Editor gutter
 		"editorGutter.modifiedBackground":  "#80cf30" ,
-		"editorGutter.addedBackground":  "#a21581" ,
+		"editorGutter.addedBackground":  "#CF59AB" ,
 		"editorGutter.deletedBackground":  "#80cf30" ,
 
 		// Matching bracket colors (boo!)
@@ -70,20 +70,20 @@
 		"editorBracketHighlight.unexpectedBracket.foreground":  "#80cf30" ,
 
 		// Diff editor
-		"diffEditorGutter.insertedLineBackground":  "#a21581" ,
+		"diffEditorGutter.insertedLineBackground":  "#CF59AB" ,
 
 		// Status bar
 		"statusBar.background":  "#80cf30" ,
 		"statusBar.foreground":  "#181818" ,
-		"statusBar.debuggingBackground":  "#a21581" ,
+		"statusBar.debuggingBackground":  "#CF59AB" ,
     "statusBar.noFolderForeground":  "#181818" ,
     "statusBar.noFolderBackground":  "#80cf30" ,
-    "statusBar.remoteBackground":  "#a21581" ,
+    "statusBar.remoteBackground":  "#CF59AB" ,
     "statusBar.remoteForeground":  "#181818" ,
 
 		// Breadcrumbs
 		"breadcrumb.focusForeground":  "#80cf30" ,
-		"breadcrumb.activeSelectionForeground":  "#a21581" 
+		"breadcrumb.activeSelectionForeground":  "#CF59AB" 
 	},
 	"tokenColors": [
 		{
@@ -150,7 +150,7 @@
 				"string"
 			],
 			"settings": {
-				"foreground":  "#a21581" ,
+				"foreground":  "#CF59AB" ,
 			}
 		},
 		{
@@ -180,7 +180,7 @@
 				"variable.parameter.function.language.special.cls"
 			],
 			"settings": {
-				"foreground":  "#a21581" ,
+				"foreground":  "#CF59AB" ,
 				"fontStyle": "italic"
 			}
 		},
