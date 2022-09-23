@@ -18,7 +18,6 @@
 		"activityBar.foreground":  "#6d8c12" ,
 		"activityBar.inactiveForeground":  "#181818" ,
 
-
 		// Toolbar
 
 		// Buttons
@@ -286,6 +285,14 @@
 				"fontStyle": ""
 			}
 		},
+		{
+			"name": "C/C++ builtin types fix",
+			"scope": "storage.type.built-in.primitive.c",
+			"settings": {
+				"foreground":  "#6d8c12" ,
+				"fontStyle": ""
+			}
+		},
 		/*
 			[JAVA-SPECIFIC MODIFICATIONS]
 		*/
@@ -361,6 +368,17 @@
 		{
 			"name": "TOLM table tag",
 			"scope": "meta.tag.table.toml",
+			"settings": {
+				"foreground":  "#6d8c12" ,
+				"fontStyle": "bold"
+			}
+		},
+		/*
+			[LUA-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "LUA keyword local",
+			"scope": "keyword.local.lua",
 			"settings": {
 				"foreground":  "#6d8c12" ,
 				"fontStyle": "bold"

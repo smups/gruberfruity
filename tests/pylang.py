@@ -79,6 +79,7 @@ def returns_multiple_values():
 #       - multiplication "*"
 #       - division "/"
 #       - exponentiation "**"
+#       - modulus "%"
 #       - mixed assignment operators
 def func():
     a = 4;
@@ -150,7 +151,7 @@ class MyClass(np.ndarray):
     class_variable = 0
     
     def __init__(self, favourite_number):
-        super.__init__()
+        super().__init__()
         self.instance_variable = favourite_number
     
     def get_favourite_number(self) -> int:

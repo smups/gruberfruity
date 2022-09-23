@@ -19,10 +19,8 @@ All themes support a minimalist version of vscode's new color matched brackets.
 
 ## Language support
 All theme variants feature enhanced syntax highlighting (more sensible colors) support for the following languages:
-- Rust
-- Python
-- Julia
-- C (C++ is still WIP)
+- Rust, C, (C++ is still WIP)
+- Python, Lua, Julia
 - Markdown
 - Java
 - JSON, XML, TOML
