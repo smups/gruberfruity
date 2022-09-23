@@ -2,6 +2,11 @@
 
 All notable changes to the "gruber fruity" theme pack will be documented here.
 
+## v0.3.1
+Language support:
+- Lua now has proper syntax highlighting
+- C/C++ built-in types are no longer marked as keywords
+
 ## v0.3.0
 Language support:
 - Julia now has enhanced highlighting:
