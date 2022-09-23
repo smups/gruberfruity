@@ -20,6 +20,7 @@ require("math")
     - value assignment "="
     - separator ","
     - table operator "{...}"
+    - optional do-nothing operator ";"
   keywords:
     - local
   langauge:
@@ -29,12 +30,10 @@ require("math")
     - tables
 ]]
 local a, b, c, d;
-a = 2;
-b = true;
-c = nil;
-d = {
-  "banana", "orange", "table"
-};
+a = 2
+b = true
+c = nil
+d = { "banana", "orange", "table"}
 
 --[[ (3) Function
   keywords:
