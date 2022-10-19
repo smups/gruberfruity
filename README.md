@@ -40,6 +40,8 @@ I recommend you use this extension in combination with a great programming font 
 - [🫒 Gruber Olive Light](#🫒-gruber-olive-light)
 - [🍐 Gruber Pear Dark](#🍐-gruber-pear-dark)
 - [🍎 Gruber Apple Light](#🍎-gruber-apple-light)
+- [🍧 Gruber Sorbet Dark](#🍧-gruber-sorbet-dark)
+- [🌸 Gruber Sakura Light](#🌸-gruber-sakura-light)
 
 ## **🍋 Gruber Lemon Dark**
 _**Variant:** Dark, **Accent color**:_ #ffd900
@@ -72,3 +74,9 @@ _**Variant:** Dark, **Accent color**:_ #80cf30
 ## **🍎 Gruber Apple Light**
 _**Variant:** Light, **Accent color**:_ #ff264e
 ![](./screenshots/Apple%20Light.png)
+
+## **🍧 Gruber Sorbet Dark**
+![](./screenshots/Sorbet%20Dark.png)
+
+## **🌸 Gruber Sakura Light**
+![](./screenshots/Sakura%20Light.png)

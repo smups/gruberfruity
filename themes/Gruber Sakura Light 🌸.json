@@ -1,0 +1,388 @@
+{
+	"name": "Gruber Cherry Light 🍒",
+	"colors": {
+		// Base colors
+		"foreground":  "#181818" ,
+		"icon.foreground":  "#DD68B4" ,
+		"sash.hoverBorder":  "#DD68B4" ,
+		"focusBorder":  "#DD68B4" ,
+		
+		//Text colors
+		"textCodeBlock.background":  "#fefefe" ,
+		"textLink.foreground":  "#DD68B4" ,
+		"textLink.activeForeground":  "#5caf21" ,
+
+		// Activity bar
+		"activityBar.background":  "#fefefe" ,
+		"activityBar.activeBorder":  "#DD68B4" ,
+		"activityBar.foreground":  "#DD68B4" ,
+		"activityBar.inactiveForeground":  "#181818" ,
+
+		// Toolbar
+
+		// Buttons
+		"button.background":  "#DD68B4" ,
+		"button.foreground":  "#fefefe" ,
+		"button.hoverBackground":  "#DD68B4" ,
+		"checkbox.background":  "#fefefe" ,
+		"checkbox.border":  "#DD68B4" ,
+		"checkbox.foreground":  "#DD68B4" ,
+
+		// Badge
+		"badge.background":  "#DD68B4" ,
+		"badge.foreground":  "#fefefe" ,
+
+		// Side Bar
+		"sideBar.background":  "#efefef" ,
+		"sideBarSectionHeader.foreground":  "#DD68B4" ,
+		"sideBarSectionHeader.background":  "#efefef" ,
+
+		// Lists
+		"list.activeSelectionBackground":  "#DD68B4" ,
+		"list.activeSelectionForeground":  "#fefefe" ,
+		"list.activeSelectionIconForeground":  "#fefefe" ,
+		"list.focusHighlightForeground":  "#fefefe" ,
+		"list.highlightForeground":  "#DD68B4" ,
+
+		// Editor colors
+		"editor.background":  "#fefefe" ,
+		"editor.foreground":  "#181818" ,
+		"editorLineNumber.foreground":  "#6b6b6b" ,
+		"editorLineNumber.activeForeground":  "#DD68B4" ,
+		"editorCursor.foreground":  "#DD68B4" ,
+		"editor.selectionBackground": "#18181822",
+
+		// Editor widget colors
+		"editorSuggestWidget.highlightForeground":  "#DD68B4" ,
+		"editorSuggestWidget.focusHighlightForeground":  "#fefefe" ,
+		"editorSuggestWidget.highlightForeground":  "#DD68B4" ,
+
+		// Editor gutter
+		"editorGutter.modifiedBackground":  "#DD68B4" ,
+		"editorGutter.addedBackground":  "#5caf21" ,
+		"editorGutter.deletedBackground":  "#DD68B4" ,
+
+		// Matching bracket colors (boo!)
+		"editorBracketHighlight.foreground1":  "#181818" ,
+		"editorBracketHighlight.foreground2":  "#6b6b6b" ,
+		"editorBracketHighlight.foreground3":  "#181818" ,
+		"editorBracketHighlight.unexpectedBracket.foreground":  "#DD68B4" ,
+
+		// Diff editor
+		"diffEditorGutter.insertedLineBackground":  "#5caf21" ,
+
+		// Status bar
+		"statusBar.background":  "#DD68B4" ,
+		"statusBar.foreground":  "#fefefe" ,
+		"statusBar.debuggingBackground":  "#5caf21" ,
+    "statusBar.noFolderForeground":  "#fefefe" ,
+    "statusBar.noFolderBackground":  "#DD68B4" ,
+    "statusBar.remoteBackground":  "#5caf21" ,
+    "statusBar.remoteForeground":  "#fefefe" ,
+
+		// Breadcrumbs
+		"breadcrumb.focusForeground":  "#DD68B4" ,
+		"breadcrumb.activeSelectionForeground":  "#5caf21" 
+	},
+	"tokenColors": [
+		{
+			"name": "Brackets",
+			"scope": [
+				"punctuation.brackets.curly"
+			],
+			"settings": {
+				"foreground":  "#181818" 
+				/* 
+					There were some issues with macro definitions wronly
+					coloring curly brackets
+				*/
+			}
+		},
+		{
+			"name": "Comment",
+			"scope": [
+				//base (works with rust)
+				"comment",
+				"punctuation.definition.comment"
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground":  "#6b6b6b" 
+			}
+		},
+		{
+			"name": "Keywords",
+			"scope": [
+				//base (works with rust)
+				"keyword.control",
+				"keyword.other",
+				"keyword.operator.new",
+				"storage.modifier",
+				"storage.type",
+				//java additions
+				"keyword.operator.instanceof.java"
+			],
+			"settings": {
+				"foreground":  "#DD68B4" ,
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "Operators, symbols and builtin types",
+			"scope": [
+				//base (works with rust)
+				"keyword.operator",
+				"keyword.operator.arithmetic",
+				"keyword.operator.assignment",
+				"keyword.operator.logical",
+				"entity.name.type.primitive",
+				"entity.name.type.numeric",
+				//java additions
+				"storage.type.primitive"
+			],
+			"settings": {
+				"foreground":  "#DD68B4" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "String",
+			"scope": [
+				"string"
+			],
+			"settings": {
+				"foreground":  "#5caf21" ,
+			}
+		},
+		{
+			"name": "Constants, numbers and internals",
+			"scope": [
+				//base (works with rust)
+				"constant",
+				//java additions
+				"variable.other.constant"
+			],
+			"settings": {
+				"foreground":  "#938bb7" 
+			}
+		},
+		{
+			"name": "self and super",
+			"scope": [
+				//base (works with rust)
+				"variable.language.self",
+				"variable.language.super",
+				//java additions
+				"variable.language.this",
+				//python additions
+				"variable.language.special.self",
+				"variable.parameter.function.language.special.self",
+				"variable.language.special.cls",
+				"variable.parameter.function.language.special.cls"
+			],
+			"settings": {
+				"foreground":  "#5caf21" ,
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name":"Metaprogramming",
+			"scope": [
+				"meta.attribute",
+				"meta.macro",
+				//julia additions
+				"support.function.macro"
+			],
+			"settings":{
+				"foreground": "#0088ff" 
+			}
+		},
+		{
+			"name": "Types",
+			"scope": [
+				//General
+				"entity.name.type",
+				//java additions
+				"entity.other.inherited-class",
+				"storage.type.java",
+				"storage.type.generic.java",
+				"storage.type.object.array.java",
+				//julia additions
+				"support.type.julia"
+			],
+			"settings": {
+				"fontStyle": "underline",
+				"foreground":  "#181818" 
+			}
+		},
+		/*
+			[RUST-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "Rust metavariable",
+			"scope": "variable.other.metavariable.name",
+			"settings": {
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "Rust metavariable type identifier",
+			"scope": "variable.other.metavariable.specifier",
+			"settings": {
+				"foreground":  "#DD68B4" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "Rust Result",
+			"scope": [
+				"entity.name.type.result",
+				"entity.name.type.option"
+			],
+			"settings": {
+				"foreground":  "#DD68B4" ,
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "Rust lifetime",
+			"scope": "entity.name.type.lifetime",
+			"settings": {
+				"foreground":  "#938bb7" ,
+				"fontStyle": ""
+			}
+		},
+		/*
+			[PYTHON-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "Python magic",
+			"scope": [
+				"support.variable.magic.python",
+				"support.function.magic.python"
+			],
+			"settings": {
+				"foreground":  "#0088ff" ,
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "Python function decorators",
+			"scope": "meta.function.decorator.python",
+			"settings": {
+				"foreground":  "#DD68B4" ,
+				"fontStyle": "bold"
+			}
+		},
+		/*
+			[C/C++-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "C/C++ hex notation fix",
+			"scope": "keyword.other.unit.hexadecimal",
+			"settings": {
+				"foreground":  "#938bb7" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "C/C++ builtin types fix",
+			"scope": "storage.type.built-in.primitive.c",
+			"settings": {
+				"foreground":  "#DD68B4" ,
+				"fontStyle": ""
+			}
+		},
+		/*
+			[JAVA-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "Import fix",
+			"scope": [
+				"storage.modifier.import.java",
+				"storage.modifier.package.java"
+			],
+			"settings": {
+				"foreground":  "#181818" ,
+				"fontStyle": ""
+			}
+		},
+		/*
+			[MARKUP-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "Markup headers",
+			"scope": ["markup.heading"],
+			"settings": {
+				"foreground":  "#DD68B4" ,
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "Markup italic",
+			"scope": "markup.italic",
+			"settings": {
+				"foreground":  "#938bb7" ,
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "Markup Bold",
+			"scope": "markup.bold",
+			"settings": {
+				"foreground":  "#938bb7" ,
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "Markup quote",
+			"scope": "markup.quote",
+			"settings": {
+				"foreground":  "#DD68B4" ,
+				"fontStyle": ""
+			}
+		},
+		/*
+			[JSON-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "JSON property name",
+			"scope": "support.type.property-name.json",
+			"settings": {
+				"foreground":  "#DD68B4" 
+			}
+		},
+		/*
+			[XML-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "XML property name",
+			"scope": "meta.tag.xml",
+			"settings": {
+				"foreground":  "#DD68B4" 
+			}
+		},
+		/*
+			[TOML-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "TOLM table tag",
+			"scope": "meta.tag.table.toml",
+			"settings": {
+				"foreground":  "#DD68B4" ,
+				"fontStyle": "bold"
+			}
+		},
+		/*
+			[LUA-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "LUA keyword local",
+			"scope": "keyword.local.lua",
+			"settings": {
+				"foreground":  "#DD68B4" ,
+				"fontStyle": "bold"
+			}
+		}
+	]
+}

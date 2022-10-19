@@ -2,7 +2,7 @@
     "name": "gruberfruity",
     "displayName": "Gruber Fruity Theme Pack",
     "description": "minimalist fruity light and dark themes inspired by Gruber",
-    "version": "0.3.1",
+    "version": "0.4.0",
     "publisher": "rw-smups",
     "icon": "icon.png",
     "repository": {
@@ -27,6 +27,16 @@
     "markdown": "standard",
     "contributes": {
         "themes": [
+            {
+                "label": "Gruber Sakura Light 🌸",
+                "uiTheme": "vs",
+                "path": "./themes/Gruber Sakura Light 🌸.json"
+            },
+            {
+                "label": "Gruber Sorbet Dark 🍧",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Gruber Sorbet Dark 🍧.json"
+            },
             {
                 "label": "Gruber Apple Light 🍎",
                 "uiTheme": "vs",

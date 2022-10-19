@@ -2,6 +2,11 @@
 
 All notable changes to the "gruber fruity" theme pack will be documented here.
 
+## v0.4.0
+Two new pink themes:
+- Gruber Sakura Light 🌸 (accent: `#dd68b4`)
+- Gruber Sorbet Dark 🍧 (accent: `#ffa6c9`)
+
 ## v0.3.1
 Language support:
 - Lua now has proper syntax highlighting
@@ -14,9 +19,9 @@ Language support:
     - Julia macros are highlighted properly
 
 Theme changes:
-- Gruber Pear Dark 🍐: string color (deadwood) is now a lighter shade of purple (#938bb7)
-- Gruber Apple Light 🍎: reduced accent color contrast with background. New accent: #ff264e
-- Gruber Blueberry Dark 🫐: reduced accent color contrast with background. New accent: #7171e3
+- Gruber Pear Dark 🍐: string color (deadwood) is now a lighter shade of purple (`#938bb7`)
+- Gruber Apple Light 🍎: reduced accent color contrast with background. New accent: `#ff264e`
+- Gruber Blueberry Dark 🫐: reduced accent color contrast with background. New accent: `#7171e3`
 
 ## v0.2.2
 Bugfixes/ general theme changes:
@@ -26,8 +31,8 @@ directory
 color of the color scheme ("leaf green")
 
 Theme changes:
-- Gruber Pear Dark 🍐: new accent color  #80cf30, is much less jarring than the
-old #deff0a one. Also changed the string color to match the olive theme's string
+- Gruber Pear Dark 🍐: new accent color  `#80cf30`, is much less jarring than the
+old `#deff0a` one. Also changed the string color to match the olive theme's string
 color (which is a dark purple) for better readability
 
 ## v0.2.1
@@ -40,10 +45,10 @@ Language support:
 
 ## v0.2.0
 Four new themes:
-- Gruber Peach Dark 🍑 (accent: #fc8d6e)
-- Gruber Olive Light 🫒 (accent: #6d8c12)
-- Gruber Pear Dark 🍐 (accent: #deff0a)
-- Gruber Apple Light 🍎 (accent: #ff0a0a)
+- Gruber Peach Dark 🍑 (accent: `#fc8d6e`)
+- Gruber Olive Light 🫒 (accent: `#6d8c12`)
+- Gruber Pear Dark 🍐 (accent: `#deff0a`)
+- Gruber Apple Light 🍎 (accent: `#ff0a0a`)
 
 Language support:
 - XML tags are now properly rendered
