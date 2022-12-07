@@ -307,6 +307,17 @@
 				"fontStyle": ""
 			}
 		},
+		{
+			"name": "Macro's should show up as macro's",
+			"scope": [
+				"storage.type.annotation.java",
+				"punctuation.definition.annotation.java"
+			],
+			"settings": {
+				"foreground":  "#0088ff" ,
+				"fontStyle": ""
+			}
+		},
 		/*
 			[MARKUP-SPECIFIC MODIFICATIONS]
 		*/
