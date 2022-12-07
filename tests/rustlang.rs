@@ -127,7 +127,7 @@ fn generic_fn<Generic>(var: Generic)
 where
     Generic: Number + Complex
 {
-    return (&generic.real(), &generic.img())
+    return (generic.real(), generic.img())
 }
 
 pub generic_return(var: &str) -> impl ObjectTrait {
@@ -391,6 +391,6 @@ async fn some_func() {
     print!("hi")
 }
 
-fn other_func() {
+async fn other_func() {
     some_func().await
 }
