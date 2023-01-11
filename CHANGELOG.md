@@ -2,6 +2,14 @@
 
 All notable changes to the "gruber fruity" theme pack will be documented here.
 
+## v0.5.0
+Language support:
+- added HTML support
+- added CSS support
+    - all built-in CSS functions are highlighted as macros
+    - all built-in CSS constants and W3C standard colour names are highlighted as constants
+    - CSS class names and ID's are highlighted with the bold fruity accent colour
+
 ## v0.4.0
 Two new pink themes:
 - Gruber Sakura Light 🌸 (accent: `#dd68b4`)
