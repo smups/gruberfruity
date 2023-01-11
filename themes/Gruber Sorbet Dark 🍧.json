@@ -392,6 +392,92 @@
 				"foreground":  "#ffa6c9" ,
 				"fontStyle": "bold"
 			}
+		},
+		/*
+			[HTML-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "DOCTYPE tag",
+			"scope": "meta.tag.metadata.doctype.html",
+			"settings": {
+				"foreground":  "#00d5ff" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "HTML tags",
+			"scope": "entity.name.tag.html",
+			"settings": {
+				"foreground":  "#ffa6c9" ,
+				"fontStyle": ""
+			}
+		},
+		/*
+			[CSS-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "CSS class",
+			"scope": [
+				"entity.other.attribute-name.class.css",
+				"entity.other.attribute-name.id.css"
+			],
+			"settings": {
+				"foreground":  "#ffa6c9" ,
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "CSS values",
+			"scope": [
+				"support.constant.property-value.css",
+				"support.constant.color.w3c-standard-color-name.css"
+			],
+			"settings": {
+				"foreground":  "#9e95c7" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "CSS separator",
+			"scope": "punctuation.separator.key-value.css",
+			"settings": {
+				"foreground":  "#ffa6c9" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "CSS operators",
+			"scope": "keyword.operator.arithmetic.css",
+			"settings": {
+				"foreground":  "#ffa6c9" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "CSS functions",
+			"scope": [
+				"support.function.attr.css",
+				"support.function.calc.css",
+				"support.function.conic-gradient.css",
+				"support.function.counter.css",
+				"support.function.cubic-bezier.css",
+				"support.function.hsl.css",
+				"support.function.hsla.css",
+				"support.function.linear-gradient.css",
+				"support.function.max.css",
+				"support.function.min.css",
+				"support.function.radial-gradient.css",
+				"support.function.repeating-conic-gradient.css",
+				"support.function.repeating-linear-gradient.css",
+				"support.function.repeating-radial-gradient.css",
+				"support.function.rgb.css",
+				"support.function.rgba.css",
+				"support.function.var.css"
+			],
+			"settings": {
+				"foreground":  "#00d5ff" ,
+				"fontStyle": ""
+			}
 		}
 	]
 }

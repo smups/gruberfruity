@@ -7,27 +7,27 @@
 // this is a comment...
 /* this too */
 
-/* (1) Imports
+/* (1) Preprocessor
     operators:
         - statement end ";"
     language:
         - import macro
+        - define and undef macros
+        - if, else, elif macros
 */
+#ifndef VERSION
+    #define VERSION 1
 
-#include <stdlib.h>;
 
 /* (2) Declarations and built-in types
     keywords:
         - const
-        - auto
         - extern
         - static
-        - register
         - unsigned
         - signed
     operators:
         - value assignment "="
-        - array operator "[...]"
     built-in primitive types:
         - short, int, long, long long
         - float, double
@@ -36,9 +36,7 @@
 const int NUMBER = 12;
 
 static char CHAR = 'c';
-auto var = 2;
 extern unsigned long long variable;
-register int speed = 2;
 
 unsigned short small_num =      0xff;
 signed int num =                0xffaa;
@@ -54,21 +52,34 @@ static const char ch = 'c';
         - volatile
         - inline
         - restricted
+        - static
     language:
         - functions
 */
-void main() {
-
+void not_quite_main() {
+    
 }
 
 inline int inline_func(int x) {return 5;}
 volatile char returns_char() {return 'c';}
-void restricted_func(int x, int* restrict ptr, int* restrict ptr2) {
+static void restricted_func(int x, int* restrict ptr, int* restrict ptr2) {
     while (x-- > 0) {
         *ptr++ = *ptr2++;
     }
 }
 
-/* (4) Numerical Arithmetic, pointers and assignments
-    
+static void modify_static(void) {
+    static int file_global_int = 12;
+    file_global_int++;
+}
+
+/* (4) Strings, pointers and arrays
+    language:
+        - string (char array)
+        - array
 */
+void string(char* string) {
+    string[12] = 'l';
+    int array[] = {1, 2, 3, 4};
+    string = "hello world";
+}
