@@ -2,6 +2,12 @@
 
 All notable changes to the "gruber fruity" theme pack will be documented here.
 
+## v0.6.0
+Language support:
+- added Go support
+    - all Go keywords are now properly highlighted
+    - all built-in Go types are highlighted as types rather than keywords
+
 ## v0.5.0
 Language support:
 - added HTML support
