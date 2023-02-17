@@ -31,13 +31,14 @@ your milage may vary. The following languages currently feature enhanced markup
 
 ### Programming languages
 - Rust, C, (C++ is still WIP)
-- Python, Lua, Julia
+- Python, Lua, Julia, Javascript/Typescript
 - Java
+- Go
 
 ### Markup languages
 - Markdown
 - JSON, XML, TOML
-- HTML, CSS
+- HTML, CSS/SCSS
 
 Note: *Markup languages have a very different purpose then general programming
 languages and require a different way of styling, so the functions of the accent
