@@ -2,7 +2,7 @@
     "name": "gruberfruity",
     "displayName": "Gruber Fruity Theme Pack",
     "description": "minimalist fruity light and dark themes inspired by Gruber",
-    "version": "0.6.0",
+    "version": "0.7.0",
     "publisher": "rw-smups",
     "icon": "icon.png",
     "repository": {
@@ -28,6 +28,11 @@
     "contributes": {
         "themes": [
             {
+                "label": "Gruber Lemon Dark 🍋",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Gruber Lemon Dark 🍋.json"
+            },
+            {
                 "label": "Gruber Sakura Light 🌸",
                 "uiTheme": "vs",
                 "path": "./themes/Gruber Sakura Light 🌸.json"
@@ -38,9 +43,9 @@
                 "path": "./themes/Gruber Sorbet Dark 🍧.json"
             },
             {
-                "label": "Gruber Apple Light 🍎",
+                "label": "Gruber Olive Light 🫒",
                 "uiTheme": "vs",
-                "path": "./themes/Gruber Apple Light 🍎.json"
+                "path": "./themes/Gruber Olive Light 🫒.json"
             },
             {
                 "label": "Gruber Pear Dark 🍐",
@@ -48,9 +53,9 @@
                 "path": "./themes/Gruber Pear Dark 🍐.json"
             },
             {
-                "label": "Gruber Olive Light 🫒",
+                "label": "Gruber Orange Light 🍊",
                 "uiTheme": "vs",
-                "path": "./themes/Gruber Olive Light 🫒.json"
+                "path": "./themes/Gruber Orange Light 🍊.json"
             },
             {
                 "label": "Gruber Peach Dark 🍑",
@@ -63,19 +68,19 @@
                 "path": "./themes/Gruber Cherry Light 🍒.json"
             },
             {
-                "label": "Gruber Blueberry Dark 🫐",
+                "label": "Gruber Apple Dark 🍎",
                 "uiTheme": "vs-dark",
-                "path": "./themes/Gruber Blueberry Dark 🫐.json"
+                "path": "./themes/Gruber Apple Dark 🍎.json"
             },
             {
-                "label": "Gruber Orange Light 🍊",
+                "label": "Gruber Blueberry Light 🫐",
                 "uiTheme": "vs",
-                "path": "./themes/Gruber Orange Light 🍊.json"
+                "path": "./themes/Gruber Blueberry Light 🫐.json"
             },
             {
-                "label": "Gruber Lemon Dark 🍋",
+                "label": "Gruber Grape Dark 🍇",
                 "uiTheme": "vs-dark",
-                "path": "./themes/Gruber Lemon Dark 🍋.json"
+                "path": "./themes/Gruber Grape Dark 🍇.json"
             }
         ]
     }
