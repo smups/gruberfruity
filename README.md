@@ -1,3 +1,5 @@
+![](https://github.com/smups/gruberfruity/blob/main/logo/gruber_dark_banner.png?raw=true#gh-dark-mode-only)
+![](https://github.com/smups/gruberfruity/blob/main/logo/gruber_light_banner.png?raw=true#gh-light-mode-only)
 # **Gruber Fruity Theme Pack**
 ![](https://img.shields.io/visual-studio-marketplace/stars/rw-smups.gruberfruity?style=for-the-badge)
 ![](https://img.shields.io/visual-studio-marketplace/d/rw-smups.gruberfruity?style=for-the-badge)
@@ -30,7 +32,7 @@ common languages. In principle, all programming languages are supported, althoug
 your milage may vary. The following languages currently feature enhanced markup 
 
 ### Programming languages
-- Rust, C, (C++ is still WIP)
+- C/C++, Rust, Zig
 - Python, Lua, Julia, Javascript/Typescript
 - Java
 - Go
@@ -51,51 +53,54 @@ I recommend you use this extension in combination with a great programming font 
 - [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro)
 
 # Variants
-- [🍋 Gruber Lemon Dark](#🍋-gruber-lemon-dark)
-- [🍊 Gruber Orange Light](#🍊-gruber-orange-light)
-- [🫐 Gruber Blueberry Dark](#🫐-gruber-blueberry-dark)
-- [🍒 Gruber Cherry Light](#🍒-gruber-cherry-light)
-- [🍑 Gruber Peach Dark](#🍑-gruber-peach-dark)
-- [🫒 Gruber Olive Light](#🫒-gruber-olive-light)
-- [🍐 Gruber Pear Dark](#🍐-gruber-pear-dark)
-- [🍎 Gruber Apple Light](#🍎-gruber-apple-light)
-- [🍧 Gruber Sorbet Dark](#🍧-gruber-sorbet-dark)
-- [🌸 Gruber Sakura Light](#🌸-gruber-sakura-light)
+|                 Dark                 |                 Light                 |
+|--------------------------------------|---------------------------------------|
+| [🍋 Gruber Lemon Dark 🍋](#🍋-gruber-lemon-dark) | *no light variant* |
+| [🍎 Gruber Apple Dark 🍎](#🍎-gruber-apple-dark) | [🍒 Gruber Cherry Light 🍒](#🍒-gruber-cherry-light)
+| [🍐 Gruber Pear Dark 🍐](#🍐-gruber-pear-dark) | [🫒 Gruber Olive Light 🫒](#🫒-gruber-olive-light)
+| [🍑 Gruber Peach Dark 🍑](#🍑-gruber-peach-dark) | [🍊 Gruber Orange Light 🍊](#🍊-gruber-orange-light)
+| [🍧 Gruber Sorbet Dark 🍧](#🍧-gruber-sorbet-dark) | [🌸 Gruber Sakura Light 🌸](#🌸-gruber-sakura-light)
+| [🍇 Gruber Grape Dark 🍇](#🍇-gruber-grape-dark) | [🫐 Gruber Blueberry Light 🫐](#🫐-gruber-blueberry-light)
 
 ## **🍋 Gruber Lemon Dark**
-_**Variant:** Dark, **Accent colour**:_ #ffd900
-![](./screenshots/Lemon%20Dark.png)
+_**Variant:** Dark, **Accent colour**:_ `#ffd900`
+![](./screenshots/lemon_dark.png)
 
-## **🍊 Gruber Orange Light**
-_**Variant:** Light, **Accent colour**:_ #ff8000
-![](./screenshots/Orange%20Light.png)
-
-## **🫐 Gruber Blueberry Dark**
-_**Variant:** Dark, **Accent colour**:_ #7171e3
-![](./screenshots/Blueberry%20Dark.png)
+## **🍎 Gruber Apple Dark**
+_**Variant:** Dark, **Accent colour**:_ `#ff264e`
+![](./screenshots/apple_dark.png)
 
 ## **🍒 Gruber Cherry Light**
-_**Variant:** Light, **Accent colour**:_ #d61e4c
-![](./screenshots/Cherry%20Light.png)
-
-## **🍑 Gruber Peach Dark**
-_**Variant:** Dark, **Accent colour**:_ #fc8d6e
-![](./screenshots/Peach%20Dark.png)
-
-## **🫒 Gruber Olive Light**
-_**Variant:** Light, **Accent colour**:_ #6d8c12
-![](./screenshots/Olive%20Light.png)
+_**Variant:** Light, **Accent colour**:_ `#d61e4c`
+![](./screenshots/cherry_light.png)
 
 ## **🍐 Gruber Pear Dark**
-_**Variant:** Dark, **Accent colour**:_ #80cf30
-![](./screenshots/Pear%20Dark.png)
+_**Variant:** Dark, **Accent colour**:_ `#80cf30`
+![](./screenshots/pear_dark.png)
 
-## **🍎 Gruber Apple Light**
-_**Variant:** Light, **Accent colour**:_ #ff264e
-![](./screenshots/Apple%20Light.png)
+## **🫒 Gruber Olive Light**
+_**Variant:** Light, **Accent colour**:_ `#6d8c12`
+![](./screenshots/olive_light.png)
+
+## **🍑 Gruber Peach Dark**
+_**Variant:** Dark, **Accent colour**:_ `#fc8d6e`
+![](./screenshots/peach_dark.png)
+## **🍊 Gruber Orange Light**
+_**Variant:** Light, **Accent colour**:_ `#ff8000`
+![](./screenshots/orange_light.png)
 
 ## **🍧 Gruber Sorbet Dark**
-![](./screenshots/Sorbet%20Dark.png)
+_**Variant:** Dark, **Accent colour**:_ `#ffa6c9`
+![](./screenshots/sorbet_dark.png)
 
 ## **🌸 Gruber Sakura Light**
-![](./screenshots/Sakura%20Light.png)
+_**Variant:** Light, **Accent colour**:_ `#dd68b4`
+![](./screenshots/sakura_light.png)
+
+## **🍇 Gruber Grape Dark**
+_**Variant:** Dark, **Accent colour**:_ `#bd4dff`
+![](./screenshots/grape_dark.png)
+
+## **🫐 Gruber Blueberry Light**
+_**Variant:** Light, **Accent colour**:_ `#4400b3`
+![](./screenshots/blueberry_light.png)
