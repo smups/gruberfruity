@@ -2,6 +2,54 @@
 
 All notable changes to the "gruber fruity" theme pack will be documented here.
 
+## v0.7.0
+Language support:
+- added Zig support
+    - all Zig keywords are now properly highlighted
+    - all built-in Zig types are highlighted as types rather than keywords
+    - Zig built-in functions are highlighted with italic sky blue
+- updated Python highlighting
+    - punctuation is now highlighted as with other languages
+    - decorators are now highlighted as metaprogramming items (as in Java)
+
+### New theme philosophy
+The theme changes in this update are quite significant and include the removal
+of some previously existing themes. This signals a change in design philosophy
+for the theme pack: 
+- Dark themes are now supposed to have stronger, brighter accent colours on a
+gray/black background
+- Light themes are now supposed to have more muted, darker accent colours on a
+light-gray/white background
+- Light and Dark themes come in pairs
+    - Apple Dark 🍎 & 🍒 Cherry Light
+    - Grape Dark 🍇 & 🫐 Blueberry Light
+    - Sorbet Dark 🍧 & 🌸 Sakura Light
+    - Pear Dark 🍐 & 🫒 Olive Light
+    - Peach Dark 🍑 & 🍊 Orange Light
+
+There are already some exceptions to this rule:
+- Sakura Light 🌸 and Orange Light 🍊 are light themes with bright accents
+- Sorbet Dark 🍧 and Peach Dark 🍑 are dark themes with muted accents
+- Lemon Dark 🍋 (the original theme) does not have a light counterpart
+
+With that out of the way, this is the concrete list of changes:
+
+Theme changes:
+- Gruber Blueberry Dark 🫐: this theme has been removed. The contrast between
+the dark purple/blue of the theme and the black background is too low to be
+readable, while still somehow being too bright to be comfortable.
+- Gruber Apple Light 🍎: this theme has been removed. The red colour just did
+not work well in a light theme, even after the last tweak.
+
+Three new themes:
+- Gruber Grape Dark 🍇 (accent: `#bd4dff`): replacement theme for Gruber
+Blueberry Dark 🫐. Bright purple colour works better with the dark background.
+- Gruber Blueberry Light 🫐 (accent: `#4400b3`). A darker version of Gruber
+Blueberry Dark 🫐's fruity accent works well on a light background. The accent
+is also bluer this time around.
+- Gruber Apple Dark 🍎 (accent: `#ff264e`): Gruber Apple Dark 🍎 (exact same
+fruity colour) but as a dark theme.
+
 ## v0.6.0
 Language support:
 - added Go support
@@ -34,8 +82,8 @@ Language support:
 
 Theme changes:
 - Gruber Pear Dark 🍐: string color (deadwood) is now a lighter shade of purple (`#938bb7`)
-- Gruber Apple Light 🍎: reduced accent color contrast with background. New accent: `#ff264e`
-- Gruber Blueberry Dark 🫐: reduced accent color contrast with background. New accent: `#7171e3`
+- Gruber Apple Light 🍎: reduced accent color contrast with background. New accent: (`#ff264e`)
+- Gruber Blueberry Dark 🫐: reduced accent color contrast with background. New accent: (`#7171e3`)
 
 ## v0.2.2
 Bugfixes/ general theme changes:
