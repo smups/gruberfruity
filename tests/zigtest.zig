@@ -5,10 +5,10 @@
 
 
 // All keywords in a row
-align ; allowzero ; and ; anyframe ; anytype ; asm ; async ; await ; break ;
-catch ; comptime ; const ; defer ; else ; enum ; errdefer ; error ; export ;
-extern ; fn ; for ; if ; inline ; noalias ; nosuspend ; or ; orelse ; packed ;
-pub ; return ; linksection ; struct ; switch ; test ; threadlocal ; try ; union ;
+align ; allowzero ; and ; asm ; async ; await ; break ; catch ; comptime ;
+const ; defer ; else ; enum ; errdefer ; export ; extern ; fn ; for ; if ;
+inline ; noalias ; nosuspend ; or ; orelse ; packed ; pub ; return ;
+linksection ; struct ; switch ; test ; threadlocal ; try ; union ;
 unreachable ; usingnamespace ; var ; volatile ; while ;
 
 // All built-in types
@@ -19,7 +19,7 @@ c_ushort ; c_uint ; c_ulong ; c_ulonglong ;
 f16 ; f32 ; f64 ; f80 ; f128 ;
 c_longdouble ;
 bool ;
-anyopaque ; void ; noreturn ; type ; anyerror ;
+void ; noreturn ; type e; anyopaque ; anyerror ; anytype ; anyerror ; error e;
 comptime_int ; comptime_float ;
 
 //All built-in primitive values
@@ -28,125 +28,336 @@ null ; undefined ;
 1345 ; -1234 ; 0x231345 ; 0o1235 ; 0b1010101001
 0.1235 ; 123.0e+77 ; 0x1324.70p-5 ; 
 
+//! The standard memory allocation interface.
+
 const std = @import("../std.zig");
-const testing = std.testing;
+const assert = std.debug.assert;
+const math = std.math;
+const mem = std.mem;
+const Allocator = @This();
+const builtin = @import("builtin");
 
-pub const Adler32 = struct {
-    const base = 65521;
-    const nmax = 5552;
+pub const Error = error{OutOfMemory};
+pub const Log2Align = math.Log2Int(usize);
 
-    adler: u32,
+// The type erased pointer to the allocator implementation
+ptr: *anyopaque,
+vtable: *const VTable,
 
-    pub fn init() Adler32 {
-        return Adler32{ .adler = 1 };
-    }
+pub const VTable = struct {
+    /// Attempt to allocate exactly `len` bytes aligned to `1 << ptr_align`.
+    ///
+    /// `ret_addr` is optionally provided as the first return address of the
+    /// allocation call stack. If the value is `0` it means no return address
+    /// has been provided.
+    alloc: *const fn (ctx: *anyopaque, len: usize, ptr_align: u8, ret_addr: usize) ?[*]u8,
 
-    // This fast variant is taken from zlib. It reduces the required modulos and unrolls longer
-    // buffer inputs and should be much quicker.
-    pub fn update(self: *Adler32, input: []const u8) void {
-        var s1 = self.adler & 0xffff;
-        var s2 = (self.adler >> 16) & 0xffff;
+    /// Attempt to expand or shrink memory in place. `buf.len` must equal the
+    /// length requested from the most recent successful call to `alloc` or
+    /// `resize`. `buf_align` must equal the same value that was passed as the
+    /// `ptr_align` parameter to the original `alloc` call.
+    ///
+    /// A result of `true` indicates the resize was successful and the
+    /// allocation now has the same address but a size of `new_len`. `false`
+    /// indicates the resize could not be completed without moving the
+    /// allocation to a different address.
+    ///
+    /// `new_len` must be greater than zero.
+    ///
+    /// `ret_addr` is optionally provided as the first return address of the
+    /// allocation call stack. If the value is `0` it means no return address
+    /// has been provided.
+    resize: *const fn (ctx: *anyopaque, buf: []u8, buf_align: u8, new_len: usize, ret_addr: usize) bool,
 
-        if (input.len == 1) {
-            s1 +%= input[0];
-            if (s1 >= base) {
-                s1 -= base;
-            }
-            s2 +%= s1;
-            if (s2 >= base) {
-                s2 -= base;
-            }
-        } else if (input.len < 16) {
-            for (input) |b| {
-                s1 +%= b;
-                s2 +%= s1;
-            }
-            if (s1 >= base) {
-                s1 -= base;
-            }
-
-            s2 %= base;
-        } else {
-            const n = nmax / 16; // note: 16 | nmax
-
-            var i: usize = 0;
-
-            while (i + nmax <= input.len) {
-                var rounds: usize = 0;
-                while (rounds < n) : (rounds += 1) {
-                    comptime var j: usize = 0;
-                    inline while (j < 16) : (j += 1) {
-                        s1 +%= input[i + j];
-                        s2 +%= s1;
-                    }
-                    i += 16;
-                }
-
-                s1 %= base;
-                s2 %= base;
-            }
-
-            if (i < input.len) {
-                while (i + 16 <= input.len) : (i += 16) {
-                    comptime var j: usize = 0;
-                    inline while (j < 16) : (j += 1) {
-                        s1 +%= input[i + j];
-                        s2 +%= s1;
-                    }
-                }
-                while (i < input.len) : (i += 1) {
-                    s1 +%= input[i];
-                    s2 +%= s1;
-                }
-
-                s1 %= base;
-                s2 %= base;
-            }
-        }
-
-        self.adler = s1 | (s2 << 16);
-    }
-
-    pub fn final(self: *Adler32) u32 {
-        return self.adler;
-    }
-
-    pub fn hash(input: []const u8) u32 {
-        var c = Adler32.init();
-        c.update(input);
-        return c.final();
-    }
+    /// Free and invalidate a buffer.
+    ///
+    /// `buf.len` must equal the most recent length returned by `alloc` or
+    /// given to a successful `resize` call.
+    ///
+    /// `buf_align` must equal the same value that was passed as the
+    /// `ptr_align` parameter to the original `alloc` call.
+    ///
+    /// `ret_addr` is optionally provided as the first return address of the
+    /// allocation call stack. If the value is `0` it means no return address
+    /// has been provided.
+    free: *const fn (ctx: *anyopaque, buf: []u8, buf_align: u8, ret_addr: usize) void,
 };
 
-test "adler32 sanity" {
-    try testing.expectEqual(@as(u32, 0x620062), Adler32.hash("a"));
-    try testing.expectEqual(@as(u32, 0xbc002ed), Adler32.hash("example"));
+pub fn noResize(
+    self: *anyopaque,
+    buf: []u8,
+    log2_buf_align: u8,
+    new_len: usize,
+    ret_addr: usize,
+) bool {
+    _ = self;
+    _ = buf;
+    _ = log2_buf_align;
+    _ = new_len;
+    _ = ret_addr;
+    return false;
 }
 
-test "adler32 long" {
-    const long1 = [_]u8{1} ** 1024;
-    try testing.expectEqual(@as(u32, 0x06780401), Adler32.hash(long1[0..]));
-
-    const long2 = [_]u8{1} ** 1025;
-    try testing.expectEqual(@as(u32, 0x0a7a0402), Adler32.hash(long2[0..]));
+pub fn noFree(
+    self: *anyopaque,
+    buf: []u8,
+    log2_buf_align: u8,
+    ret_addr: usize,
+) void {
+    _ = self;
+    _ = buf;
+    _ = log2_buf_align;
+    _ = ret_addr;
 }
 
-test "adler32 very long" {
-    const long = [_]u8{1} ** 5553;
-    try testing.expectEqual(@as(u32, 0x707f15b2), Adler32.hash(long[0..]));
+/// This function is not intended to be called except from within the
+/// implementation of an Allocator
+pub inline fn rawAlloc(self: Allocator, len: usize, ptr_align: u8, ret_addr: usize) ?[*]u8 {
+    return self.vtable.alloc(self.ptr, len, ptr_align, ret_addr);
 }
 
-test "adler32 very long with variation" {
-    const long = comptime blk: {
-        @setEvalBranchQuota(7000);
-        var result: [6000]u8 = undefined;
+/// This function is not intended to be called except from within the
+/// implementation of an Allocator
+pub inline fn rawResize(self: Allocator, buf: []u8, log2_buf_align: u8, new_len: usize, ret_addr: usize) bool {
+    return self.vtable.resize(self.ptr, buf, log2_buf_align, new_len, ret_addr);
+}
 
-        var i: usize = 0;
-        while (i < result.len) : (i += 1) {
-            result[i] = @truncate(u8, i);
+/// This function is not intended to be called except from within the
+/// implementation of an Allocator
+pub inline fn rawFree(self: Allocator, buf: []u8, log2_buf_align: u8, ret_addr: usize) void {
+    return self.vtable.free(self.ptr, buf, log2_buf_align, ret_addr);
+}
+
+/// Returns a pointer to undefined memory.
+/// Call `destroy` with the result to free the memory.
+pub fn create(self: Allocator, comptime T: type) Error!*T {
+    if (@sizeOf(T) == 0) return @intToPtr(*T, math.maxInt(usize));
+    const slice = try self.allocAdvancedWithRetAddr(T, null, 1, @returnAddress());
+    return &slice[0];
+}
+
+/// `ptr` should be the return value of `create`, or otherwise
+/// have the same address and alignment property.
+pub fn destroy(self: Allocator, ptr: anytype) void {
+    const info = @typeInfo(@TypeOf(ptr)).Pointer;
+    const T = info.child;
+    if (@sizeOf(T) == 0) return;
+    const non_const_ptr = @ptrCast([*]u8, @constCast(ptr));
+    self.rawFree(non_const_ptr[0..@sizeOf(T)], math.log2(info.alignment), @returnAddress());
+}
+
+/// Allocates an array of `n` items of type `T` and sets all the
+/// items to `undefined`. Depending on the Allocator
+/// implementation, it may be required to call `free` once the
+/// memory is no longer needed, to avoid a resource leak. If the
+/// `Allocator` implementation is unknown, then correct code will
+/// call `free` when done.
+///
+/// For allocating a single item, see `create`.
+pub fn alloc(self: Allocator, comptime T: type, n: usize) Error![]T {
+    return self.allocAdvancedWithRetAddr(T, null, n, @returnAddress());
+}
+
+pub fn allocWithOptions(
+    self: Allocator,
+    comptime Elem: type,
+    n: usize,
+    /// null means naturally aligned
+    comptime optional_alignment: ?u29,
+    comptime optional_sentinel: ?Elem,
+) Error!AllocWithOptionsPayload(Elem, optional_alignment, optional_sentinel) {
+    return self.allocWithOptionsRetAddr(Elem, n, optional_alignment, optional_sentinel, @returnAddress());
+}
+
+pub fn allocWithOptionsRetAddr(
+    self: Allocator,
+    comptime Elem: type,
+    n: usize,
+    /// null means naturally aligned
+    comptime optional_alignment: ?u29,
+    comptime optional_sentinel: ?Elem,
+    return_address: usize,
+) Error!AllocWithOptionsPayload(Elem, optional_alignment, optional_sentinel) {
+    if (optional_sentinel) |sentinel| {
+        const ptr = try self.allocAdvancedWithRetAddr(Elem, optional_alignment, n + 1, return_address);
+        ptr[n] = sentinel;
+        return ptr[0..n :sentinel];
+    } else {
+        return self.allocAdvancedWithRetAddr(Elem, optional_alignment, n, return_address);
+    }
+}
+
+fn AllocWithOptionsPayload(comptime Elem: type, comptime alignment: ?u29, comptime sentinel: ?Elem) type {
+    if (sentinel) |s| {
+        return [:s]align(alignment orelse @alignOf(Elem)) Elem;
+    } else {
+        return []align(alignment orelse @alignOf(Elem)) Elem;
+    }
+}
+
+/// Allocates an array of `n + 1` items of type `T` and sets the first `n`
+/// items to `undefined` and the last item to `sentinel`. Depending on the
+/// Allocator implementation, it may be required to call `free` once the
+/// memory is no longer needed, to avoid a resource leak. If the
+/// `Allocator` implementation is unknown, then correct code will
+/// call `free` when done.
+///
+/// For allocating a single item, see `create`.
+pub fn allocSentinel(
+    self: Allocator,
+    comptime Elem: type,
+    n: usize,
+    comptime sentinel: Elem,
+) Error![:sentinel]Elem {
+    return self.allocWithOptionsRetAddr(Elem, n, null, sentinel, @returnAddress());
+}
+
+pub fn alignedAlloc(
+    self: Allocator,
+    comptime T: type,
+    /// null means naturally aligned
+    comptime alignment: ?u29,
+    n: usize,
+) Error![]align(alignment orelse @alignOf(T)) T {
+    return self.allocAdvancedWithRetAddr(T, alignment, n, @returnAddress());
+}
+
+pub fn allocAdvancedWithRetAddr(
+    self: Allocator,
+    comptime T: type,
+    /// null means naturally aligned
+    comptime alignment: ?u29,
+    n: usize,
+    return_address: usize,
+) Error![]align(alignment orelse @alignOf(T)) T {
+    const a = alignment orelse @alignOf(T);
+
+    // The Zig Allocator interface is not intended to solve alignments beyond
+    // the minimum OS page size. For these use cases, the caller must use OS
+    // APIs directly.
+    comptime assert(a <= mem.page_size);
+
+    if (n == 0) {
+        const ptr = comptime std.mem.alignBackward(math.maxInt(usize), a);
+        return @intToPtr([*]align(a) T, ptr)[0..0];
+    }
+
+    const byte_count = math.mul(usize, @sizeOf(T), n) catch return Error.OutOfMemory;
+    const byte_ptr = self.rawAlloc(byte_count, log2a(a), return_address) orelse return Error.OutOfMemory;
+    // TODO: https://github.com/ziglang/zig/issues/4298
+    @memset(byte_ptr, undefined, byte_count);
+    const byte_slice = byte_ptr[0..byte_count];
+    return mem.bytesAsSlice(T, @alignCast(a, byte_slice));
+}
+
+/// Requests to modify the size of an allocation. It is guaranteed to not move
+/// the pointer, however the allocator implementation may refuse the resize
+/// request by returning `false`.
+pub fn resize(self: Allocator, old_mem: anytype, new_n: usize) bool {
+    const Slice = @typeInfo(@TypeOf(old_mem)).Pointer;
+    const T = Slice.child;
+    if (new_n == 0) {
+        self.free(old_mem);
+        return true;
+    }
+    if (old_mem.len == 0) {
+        return false;
+    }
+    const old_byte_slice = mem.sliceAsBytes(old_mem);
+    // I would like to use saturating multiplication here, but LLVM cannot lower it
+    // on WebAssembly: https://github.com/ziglang/zig/issues/9660
+    //const new_byte_count = new_n *| @sizeOf(T);
+    const new_byte_count = math.mul(usize, @sizeOf(T), new_n) catch return false;
+    return self.rawResize(old_byte_slice, log2a(Slice.alignment), new_byte_count, @returnAddress());
+}
+
+/// This function requests a new byte size for an existing allocation, which
+/// can be larger, smaller, or the same size as the old memory allocation.
+/// If `new_n` is 0, this is the same as `free` and it always succeeds.
+pub fn realloc(self: Allocator, old_mem: anytype, new_n: usize) t: {
+    const Slice = @typeInfo(@TypeOf(old_mem)).Pointer;
+    break :t Error![]align(Slice.alignment) Slice.child;
+} {
+    return self.reallocAdvanced(old_mem, new_n, @returnAddress());
+}
+
+pub fn reallocAdvanced(
+    self: Allocator,
+    old_mem: anytype,
+    new_n: usize,
+    return_address: usize,
+) t: {
+    const Slice = @typeInfo(@TypeOf(old_mem)).Pointer;
+    break :t Error![]align(Slice.alignment) Slice.child;
+} {
+    const Slice = @typeInfo(@TypeOf(old_mem)).Pointer;
+    const T = Slice.child;
+    if (old_mem.len == 0) {
+        return self.allocAdvancedWithRetAddr(T, Slice.alignment, new_n, return_address);
+    }
+    if (new_n == 0) {
+        self.free(old_mem);
+        const ptr = comptime std.mem.alignBackward(math.maxInt(usize), Slice.alignment);
+        return @intToPtr([*]align(Slice.alignment) T, ptr)[0..0];
+    }
+
+    const old_byte_slice = mem.sliceAsBytes(old_mem);
+    const byte_count = math.mul(usize, @sizeOf(T), new_n) catch return Error.OutOfMemory;
+    // Note: can't set shrunk memory to undefined as memory shouldn't be modified on realloc failure
+    if (mem.isAligned(@ptrToInt(old_byte_slice.ptr), Slice.alignment)) {
+        if (self.rawResize(old_byte_slice, log2a(Slice.alignment), byte_count, return_address)) {
+            return mem.bytesAsSlice(T, @alignCast(Slice.alignment, old_byte_slice.ptr[0..byte_count]));
         }
+    }
 
-        break :blk result;
-    };
+    const new_mem = self.rawAlloc(byte_count, log2a(Slice.alignment), return_address) orelse
+        return error.OutOfMemory;
+    @memcpy(new_mem, old_byte_slice.ptr, @min(byte_count, old_byte_slice.len));
+    // TODO https://github.com/ziglang/zig/issues/4298
+    @memset(old_byte_slice.ptr, undefined, old_byte_slice.len);
+    self.rawFree(old_byte_slice, log2a(Slice.alignment), return_address);
 
-    try testing.e
+    return mem.bytesAsSlice(T, @alignCast(Slice.alignment, new_mem[0..byte_count]));
+}
+
+/// Free an array allocated with `alloc`. To free a single item,
+/// see `destroy`.
+pub fn free(self: Allocator, memory: anytype) void {
+    const Slice = @typeInfo(@TypeOf(memory)).Pointer;
+    const bytes = mem.sliceAsBytes(memory);
+    const bytes_len = bytes.len + if (Slice.sentinel != null) @sizeOf(Slice.child) else 0;
+    if (bytes_len == 0) return;
+    const non_const_ptr = @constCast(bytes.ptr);
+    // TODO: https://github.com/ziglang/zig/issues/4298
+    @memset(non_const_ptr, undefined, bytes_len);
+    self.rawFree(non_const_ptr[0..bytes_len], log2a(Slice.alignment), @returnAddress());
+}
+
+/// Copies `m` to newly allocated memory. Caller owns the memory.
+pub fn dupe(allocator: Allocator, comptime T: type, m: []const T) ![]T {
+    const new_buf = try allocator.alloc(T, m.len);
+    mem.copy(T, new_buf, m);
+    return new_buf;
+}
+
+/// Copies `m` to newly allocated memory, with a null-terminated element. Caller owns the memory.
+pub fn dupeZ(allocator: Allocator, comptime T: type, m: []const T) ![:0]T {
+    const new_buf = try allocator.alloc(T, m.len + 1);
+    mem.copy(T, new_buf, m);
+    new_buf[m.len] = 0;
+    return new_buf[0..m.len :0];
+}
+
+/// TODO replace callsites with `@log2` after this proposal is implemented:
+/// https://github.com/ziglang/zig/issues/13642
+inline fn log2a(x: anytype) switch (@typeInfo(@TypeOf(x))) {
+    .Int => math.Log2Int(@TypeOf(x)),
+    .ComptimeInt => comptime_int,
+    else => @compileError("int please"),
+} {
+    switch (@typeInfo(@TypeOf(x))) {
+        .Int => return math.log2_int(@TypeOf(x), x),
+        .ComptimeInt => return math.log2(x),
+        else => @compileError("bad"),
+    }
+}
