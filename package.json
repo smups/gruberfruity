@@ -4,7 +4,7 @@
     "description": "minimalist fruity light and dark themes inspired by Gruber",
     "version": "0.7.0",
     "publisher": "rw-smups",
-    "icon": "icon.png",
+    "icon": "logo/icon.png",
     "repository": {
         "type": "git",
         "url": "https://github.com/smups/gruberfruity"
