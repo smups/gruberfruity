@@ -30,8 +30,8 @@ print(np.__name__)
 #       - variables
 variable: int = 2
 string: str = "hello world"
-tuple = ("le me", 2)
-list = [r"item 1", 2, 3, True, f'item4{tuple}']
+tup = ("le me", 2)
+li = [r"item 1", 2, 3, True, f'item4{tuple}']
 
 # (3) Functions
 #   keywords:
