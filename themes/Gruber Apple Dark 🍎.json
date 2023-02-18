@@ -1,0 +1,522 @@
+{
+	"name":  "Gruber Apple Dark 🍎" ,
+	"colors": {
+		// Base colors
+		"foreground":  "#dddddd" ,
+		"icon.foreground":  "#FF264E" ,
+		"sash.hoverBorder":  "#FF264E" ,
+		"focusBorder":  "#FF264E" ,
+		
+		//Text colors
+		"textCodeBlock.background":  "#181818" ,
+		"textLink.foreground":  "#FF264E" ,
+		"textLink.activeForeground":  "#73c936" ,
+
+		// Activity bar
+		"activityBar.background":  "#181818" ,
+		"activityBar.activeBorder":  "#FF264E" ,
+		"activityBar.foreground":  "#FF264E" ,
+		"activityBar.inactiveForeground":  "#dddddd" ,
+
+		// Toolbar
+
+		// Buttons
+		"button.background":  "#FF264E" ,
+		"button.foreground":  "#181818" ,
+		"button.hoverBackground":  "#FF264E" ,
+		"checkbox.background":  "#181818" ,
+		"checkbox.border":  "#FF264E" ,
+		"checkbox.foreground":  "#FF264E" ,
+
+		// Badge
+		"badge.background":  "#FF264E" ,
+		"badge.foreground":  "#181818" ,
+
+		// Side Bar
+		"sideBar.background":  "#282828" ,
+		"sideBarSectionHeader.foreground":  "#FF264E" ,
+		"sideBarSectionHeader.background":  "#282828" ,
+
+		// Lists
+		"list.activeSelectionBackground":  "#FF264E" ,
+		"list.activeSelectionForeground":  "#181818" ,
+		"list.activeSelectionIconForeground":  "#181818" ,
+		"list.focusHighlightForeground":  "#181818" ,
+		"list.highlightForeground":  "#FF264E" ,
+
+		// Editor colors
+		"editor.background":  "#181818" ,
+		"editor.foreground":  "#dddddd" ,
+		"editorLineNumber.foreground":  "#6b6b6b" ,
+		"editorLineNumber.activeForeground":  "#FF264E" ,
+		"editorCursor.foreground":  "#FF264E" ,
+		"editor.selectionBackground": "#cccccc22",
+
+		// Editor widget colors
+		"editorSuggestWidget.highlightForeground":  "#FF264E" ,
+		"editorSuggestWidget.focusHighlightForeground":  "#181818" ,
+		"editorSuggestWidget.highlightForeground":  "#FF264E" ,
+
+		// Editor gutter
+		"editorGutter.modifiedBackground":  "#FF264E" ,
+		"editorGutter.addedBackground":  "#73c936" ,
+		"editorGutter.deletedBackground":  "#FF264E" ,
+
+		// Matching bracket colors (boo!)
+		"editorBracketHighlight.foreground1":  "#dddddd" ,
+		"editorBracketHighlight.foreground2":  "#6b6b6b" ,
+		"editorBracketHighlight.foreground3":  "#dddddd" ,
+		"editorBracketHighlight.unexpectedBracket.foreground":  "#FF264E" ,
+
+		// Diff editor
+		"diffEditorGutter.insertedLineBackground":  "#73c936" ,
+
+		// Status bar
+		"statusBar.background":  "#FF264E" ,
+		"statusBar.foreground":  "#181818" ,
+		"statusBar.debuggingBackground":  "#73c936" ,
+    "statusBar.noFolderForeground":  "#181818" ,
+    "statusBar.noFolderBackground":  "#FF264E" ,
+    "statusBar.remoteBackground":  "#73c936" ,
+    "statusBar.remoteForeground":  "#181818" ,
+
+		// Breadcrumbs
+		"breadcrumb.focusForeground":  "#FF264E" ,
+		"breadcrumb.activeSelectionForeground":  "#73c936" 
+	},
+	"tokenColors": [
+		{
+			"name": "Brackets",
+			"scope": [
+				"punctuation.brackets.curly"
+			],
+			"settings": {
+				"foreground":  "#dddddd" 
+				/* 
+					There were some issues with macro definitions wronly
+					coloring curly brackets
+				*/
+			}
+		},
+		{
+			"name": "Comment",
+			"scope": [
+				//base (works with rust)
+				"comment",
+				"punctuation.definition.comment"
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground":  "#6b6b6b" 
+			}
+		},
+		{
+			"name": "Keywords",
+			"scope": [
+				//base (works with rust)
+				"keyword.control",
+				"keyword.other",
+				"keyword.operator.new",
+				"storage.modifier",
+				"storage.type"
+			],
+			"settings": {
+				"foreground":  "#FF264E" ,
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "Operators, symbols and builtin types",
+			"scope": [
+				//base (works with rust)
+				"keyword.operator",
+				"keyword.operator.arithmetic",
+				"keyword.operator.assignment",
+				"keyword.operator.logical",
+				"entity.name.type.primitive",
+				"entity.name.type.numeric",
+				//java additions
+				"storage.type.primitive"
+			],
+			"settings": {
+				"foreground":  "#FF264E" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "String",
+			"scope": [
+				"string"
+			],
+			"settings": {
+				"foreground":  "#73c936" ,
+			}
+		},
+		{
+			"name": "Constants, numbers and internals",
+			"scope": [
+				//base (works with rust)
+				"constant",
+				//java additions
+				"variable.other.constant"
+			],
+			"settings": {
+				"foreground":  "#9e95c7" 
+			}
+		},
+		{
+			"name": "self and super",
+			"scope": [
+				//base (works with rust)
+				"variable.language.self",
+				"variable.language.super",
+				//java additions
+				"variable.language.this",
+				//python additions
+				"variable.language.special.self",
+				"variable.parameter.function.language.special.self",
+				"variable.language.special.cls",
+				"variable.parameter.function.language.special.cls"
+			],
+			"settings": {
+				"foreground":  "#73c936" ,
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name":"Metaprogramming",
+			"scope": [
+				"meta.attribute",
+				"meta.macro",
+				//julia additions
+				"support.function.macro"
+			],
+			"settings":{
+				"foreground": "#00d5ff" 
+			}
+		},
+		{
+			"name": "Types",
+			"scope": [
+				//General
+				"entity.name.type",
+				//java additions
+				"entity.other.inherited-class",
+				"storage.type.java",
+				"storage.type.generic.java",
+				"storage.type.object.array.java",
+				//julia additions
+				"support.type.julia"
+			],
+			"settings": {
+				"foreground":  "#dddddd" ,
+				"fontStyle": "underline"
+			}
+		},
+		/*
+			[RUST-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "Rust metavariable",
+			"scope": "variable.other.metavariable.name",
+			"settings": {
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "Rust metavariable type identifier",
+			"scope": "variable.other.metavariable.specifier",
+			"settings": {
+				"foreground":  "#FF264E" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "Rust Result",
+			"scope": [
+				"entity.name.type.result",
+				"entity.name.type.option"
+			],
+			"settings": {
+				"foreground":  "#FF264E" ,
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "Rust lifetime",
+			"scope": "entity.name.type.lifetime",
+			"settings": {
+				"foreground":  "#9e95c7" ,
+				"fontStyle": ""
+			}
+		},
+		/*
+			[PYTHON-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "Python magic",
+			"scope": [
+				"support.variable.magic.python",
+				"support.function.magic.python"
+			],
+			"settings": {
+				"foreground":  "#00d5ff" ,
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "Python function decorators",
+			"scope": "meta.function.decorator.python",
+			"settings": {
+				"foreground":  "#FF264E" ,
+				"fontStyle": "bold"
+			}
+		},
+		/*
+			[C/C++-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "C/C++ hex notation fix",
+			"scope": "keyword.other.unit.hexadecimal",
+			"settings": {
+				"foreground":  "#9e95c7" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "C/C++ builtin types fix",
+			"scope": "storage.type.built-in.primitive.c",
+			"settings": {
+				"foreground":  "#FF264E" ,
+				"fontStyle": ""
+			}
+		},
+		/*
+			[JAVA-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "Import fix",
+			"scope": [
+				"storage.modifier.import.java",
+				"storage.modifier.package.java"
+			],
+			"settings": {
+				"foreground":  "#dddddd" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "Macro's should show up as macro's",
+			"scope": [
+				"storage.type.annotation.java",
+				"punctuation.definition.annotation.java"
+			],
+			"settings": {
+				"foreground":  "#00d5ff" ,
+				"fontStyle": ""
+			}
+		},
+		/*
+			[MARKUP-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "Markup headers",
+			"scope": ["markup.heading"],
+			"settings": {
+				"foreground":  "#FF264E" ,
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "Markup italic",
+			"scope": "markup.italic",
+			"settings": {
+				"foreground":  "#9e95c7" ,
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "Markup Bold",
+			"scope": "markup.bold",
+			"settings": {
+				"foreground":  "#9e95c7" ,
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "Markup quote",
+			"scope": "markup.quote",
+			"settings": {
+				"foreground":  "#FF264E" ,
+				"fontStyle": ""
+			}
+		},
+		/*
+			[JSON-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "JSON property name",
+			"scope": "support.type.property-name.json",
+			"settings": {
+				"foreground":  "#FF264E" 
+			}
+		},
+		/*
+			[XML-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "XML property name",
+			"scope": "meta.tag.xml",
+			"settings": {
+				"foreground":  "#FF264E" 
+			}
+		},
+		/*
+			[TOML-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "TOLM table tag",
+			"scope": "meta.tag.table.toml",
+			"settings": {
+				"foreground":  "#FF264E" ,
+				"fontStyle": "bold"
+			}
+		},
+		/*
+			[LUA-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "LUA keyword local",
+			"scope": "keyword.local.lua",
+			"settings": {
+				"foreground":  "#FF264E" ,
+				"fontStyle": "bold"
+			}
+		},
+		/*
+			[HTML-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "DOCTYPE tag",
+			"scope": "meta.tag.metadata.doctype.html",
+			"settings": {
+				"foreground":  "#00d5ff" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "HTML tags",
+			"scope": "entity.name.tag.html",
+			"settings": {
+				"foreground":  "#FF264E" ,
+				"fontStyle": ""
+			}
+		},
+		/*
+			[CSS-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "CSS class",
+			"scope": [
+				"entity.other.attribute-name.class.css",
+				"entity.other.attribute-name.id.css"
+			],
+			"settings": {
+				"foreground":  "#FF264E" ,
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "CSS values",
+			"scope": [
+				"support.constant.property-value.css",
+				"support.constant.color.w3c-standard-color-name.css"
+			],
+			"settings": {
+				"foreground":  "#9e95c7" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "CSS separator",
+			"scope": "punctuation.separator.key-value.css",
+			"settings": {
+				"foreground":  "#FF264E" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "CSS operators",
+			"scope": "keyword.operator.arithmetic.css",
+			"settings": {
+				"foreground":  "#FF264E" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "CSS functions",
+			"scope": [
+				"support.function.attr.css",
+				"support.function.calc.css",
+				"support.function.conic-gradient.css",
+				"support.function.counter.css",
+				"support.function.cubic-bezier.css",
+				"support.function.hsl.css",
+				"support.function.hsla.css",
+				"support.function.linear-gradient.css",
+				"support.function.max.css",
+				"support.function.min.css",
+				"support.function.radial-gradient.css",
+				"support.function.repeating-conic-gradient.css",
+				"support.function.repeating-linear-gradient.css",
+				"support.function.repeating-radial-gradient.css",
+				"support.function.rgb.css",
+				"support.function.rgba.css",
+				"support.function.var.css"
+			],
+			"settings": {
+				"foreground":  "#00d5ff" ,
+				"fontStyle": ""
+			}
+		},
+		/*
+			[GO-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "Go missing keywords",
+			"scope": [
+				"keyword.package.go",
+				"keyword.type.go",
+				"keyword.struct.go",
+				"keyword.function.go",
+				"keyword.var.go",
+				"keyword.import.go",
+				"keyword.interface.go",
+				"keyword.map.go",
+				"keyword.channel.go",
+				"keyword.const.go"
+			],
+			"settings": {
+				"foreground":  "#FF264E" ,
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "Go built-in types",
+			"scope": [
+				"storage.type.string.go",
+				"storage.type.int.go",
+				"storage.type.error.go",
+				"storage.type.byte.go",
+				"storage.type.numeric.go",
+				"storage.type.boolean.go",
+				"storage.type.rune.go",
+				"storage.type.uintptr.go"
+			],
+			"settings": {
+				"foreground":  "#FF264E" ,
+				"fontStyle": ""
+			}
+		}
+	]
+}
