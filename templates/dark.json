@@ -517,6 +517,77 @@
 				"foreground": __fruity_accent__,
 				"fontStyle": ""
 			}
+		},
+		/*
+			[ZIG-SPECIFIC MODIFICATIONS]
+		*/
+		{
+			"name": "Zig missing keywords",
+			"scope": [
+				"keyword.storage.zig",
+				"keyword.default.zig",
+				"keyword.statement.zig",
+				"keyword.structure.zig"
+			],
+			"settings": {
+				"foreground": __fruity_accent__,
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "Zig built-in types",
+			"scope": [
+				"keyword.type.zig",
+				"keyword.type.integer.zig",
+				"keyword.type.c.zig"
+			],
+			"settings": {
+				"foreground": __fruity_accent__,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "Zig missing operators",
+			"scope": [
+				"keyword.type.zig",
+				"keyword.type.integer.zig",
+				"keyword.type.c.zig"
+			],
+			"settings": {
+				"foreground": __fruity_accent__,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "Zig built-in functions",
+			"scope": [
+				"support.function.builtin.zig"
+			],
+			"settings": {
+				"foreground": __sky_blue__,
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "Zig missing literals",
+			"scope": [
+				"keyword.constant.bool.zig",
+				"keyword.constant.default.zig"
+			],
+			"settings": {
+				"foreground": __dead_wood__,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "Zig error types",
+			"scope": [
+				"variable.constant.error.zig"
+			],
+			"settings": {
+				"foreground": __text_default__,
+				"fontStyle": "underline"
+			}
 		}
 	]
 }
