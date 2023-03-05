@@ -2,6 +2,20 @@
 
 All notable changes to the "gruber fruity" theme pack will be documented here.
 
+## v0.7.1
+Language support:
+- C support improvements (VSCode)
+    - The `->` operator is now highlighted correctly
+    - Square brackets are no longer highlighted as keywords
+    - Pre-processor directives are now highlighted as macros
+- C++ support improvements (VSCode)
+    - The `->` operator is now highlighted correctly
+    - Pre-processor directives are now highlighted as macros
+
+Editor:
+- Remote Icon now has the sky blue accent colour rather than the default
+- Warning and Error items in the status bar now have nice colours
+
 ## v0.7.0
 Language support:
 - added Zig support

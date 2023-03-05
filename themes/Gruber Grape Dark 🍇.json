@@ -55,7 +55,6 @@
 		// Editor widget colors
 		"editorSuggestWidget.highlightForeground":  "#bd4dff" ,
 		"editorSuggestWidget.focusHighlightForeground":  "#181818" ,
-		"editorSuggestWidget.highlightForeground":  "#bd4dff" ,
 
 		// Editor gutter
 		"editorGutter.modifiedBackground":  "#bd4dff" ,
@@ -77,8 +76,15 @@
 		"statusBar.debuggingBackground":  "#73c936" ,
     "statusBar.noFolderForeground":  "#181818" ,
     "statusBar.noFolderBackground":  "#bd4dff" ,
-    "statusBar.remoteBackground":  "#73c936" ,
-    "statusBar.remoteForeground":  "#181818" ,
+		"statusBar.focusBorder":  "#dddddd" ,
+    
+		"statusBarItem.focusBorder":  "#dddddd" ,
+		"statusBarItem.remoteBackground":  "#00d5ff" ,
+    "statusBarItem.remoteForeground":  "#dddddd" ,
+		"statusBarItem.warningBackground":  "#282828" ,
+		"statusBarItem.warningForeground":  "#bd4dff" ,
+		"statusBarItem.errorBackground":  "#d16693" ,
+		"statusBarItem.errorForeground":  "#181818" ,
 
 		// Breadcrumbs
 		"breadcrumb.focusForeground":  "#bd4dff" ,
@@ -161,7 +167,7 @@
 				"variable.other.constant"
 			],
 			"settings": {
-				"foreground":  "#9e95c7" 
+				"foreground":  "#d16693" 
 			}
 		},
 		{
@@ -246,7 +252,7 @@
 			"name": "Rust lifetime",
 			"scope": "entity.name.type.lifetime",
 			"settings": {
-				"foreground":  "#9e95c7" ,
+				"foreground":  "#d16693" ,
 				"fontStyle": ""
 			}
 		},
@@ -295,13 +301,56 @@
 			"name": "C/C++ hex notation fix",
 			"scope": "keyword.other.unit.hexadecimal",
 			"settings": {
-				"foreground":  "#9e95c7" ,
+				"foreground":  "#d16693" ,
 				"fontStyle": ""
 			}
 		},
 		{
 			"name": "C/C++ builtin types fix",
-			"scope": "storage.type.built-in.primitive.c",
+			"scope": [
+				"storage.type.built-in.primitive.cpp",
+				"storage.type.built-in.primitive.c"
+			],
+			"settings": {
+				"foreground":  "#bd4dff" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "C/C++ macros",
+			"scope": [
+				"meta.preprocessor.c",
+				"entity.name.function.preprocessor.c",
+				"meta.preprocessor.macro.c",
+				"entity.name.function.preprocessor.cpp"
+			],
+			"settings": {
+				"foreground":  "#00d5ff" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "C bracket fix",
+			"scope": [
+				"punctuation.separator.pointer-access.c",
+				"punctuation.separator.pointer-access.cpp"
+			],
+			"settings": {
+				"foreground":  "#bd4dff" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "C/C++ access operators fix",
+			"scope": "storage.modifier.array.bracket.square.c",
+			"settings": {
+				"foreground":  "#dddddd" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "C++ namespace operator fix",
+			"scope": "punctuation.separator.namespace.access.cpp",
 			"settings": {
 				"foreground":  "#bd4dff" ,
 				"fontStyle": ""
@@ -347,7 +396,7 @@
 			"name": "Markup italic",
 			"scope": "markup.italic",
 			"settings": {
-				"foreground":  "#9e95c7" ,
+				"foreground":  "#d16693" ,
 				"fontStyle": "italic"
 			}
 		},
@@ -355,7 +404,7 @@
 			"name": "Markup Bold",
 			"scope": "markup.bold",
 			"settings": {
-				"foreground":  "#9e95c7" ,
+				"foreground":  "#d16693" ,
 				"fontStyle": "bold"
 			}
 		},
@@ -449,7 +498,7 @@
 				"support.constant.color.w3c-standard-color-name.css"
 			],
 			"settings": {
-				"foreground":  "#9e95c7" ,
+				"foreground":  "#d16693" ,
 				"fontStyle": ""
 			}
 		},
@@ -591,7 +640,7 @@
 				"keyword.constant.default.zig"
 			],
 			"settings": {
-				"foreground":  "#9e95c7" ,
+				"foreground":  "#d16693" ,
 				"fontStyle": ""
 			}
 		},

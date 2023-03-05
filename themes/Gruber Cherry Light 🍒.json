@@ -77,8 +77,15 @@
 		"statusBar.debuggingBackground":  "#5caf21" ,
     "statusBar.noFolderForeground":  "#fefefe" ,
     "statusBar.noFolderBackground":  "#d61e4c" ,
-    "statusBar.remoteBackground":  "#5caf21" ,
-    "statusBar.remoteForeground":  "#fefefe" ,
+		"statusBar.focusBorder":  "#181818" ,
+    
+		"statusBarItem.focusBorder":  "#181818" ,
+		"statusBarItem.remoteBackground":  "#0088ff" ,
+    "statusBarItem.remoteForeground":  "#181818" ,
+		"statusBarItem.warningBackground":  "#efefef" ,
+		"statusBarItem.warningForeground":  "#d61e4c" ,
+		"statusBarItem.errorBackground":  "#938bb7" ,
+		"statusBarItem.errorForeground":  "#fefefe" ,
 
 		// Breadcrumbs
 		"breadcrumb.focusForeground":  "#d61e4c" ,
@@ -303,7 +310,50 @@
 		},
 		{
 			"name": "C/C++ builtin types fix",
-			"scope": "storage.type.built-in.primitive.c",
+			"scope": [
+				"storage.type.built-in.primitive.cpp",
+				"storage.type.built-in.primitive.c"
+			],
+			"settings": {
+				"foreground":  "#d61e4c" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "C/C++ macros",
+			"scope": [
+				"meta.preprocessor.c",
+				"entity.name.function.preprocessor.c",
+				"meta.preprocessor.macro.c",
+				"entity.name.function.preprocessor.cpp"
+			],
+			"settings": {
+				"foreground":  "#0088ff" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "C bracket fix",
+			"scope": [
+				"punctuation.separator.pointer-access.c",
+				"punctuation.separator.pointer-access.cpp"
+			],
+			"settings": {
+				"foreground":  "#d61e4c" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "C/C++ access operators fix",
+			"scope": "storage.modifier.array.bracket.square.c",
+			"settings": {
+				"foreground":  "#181818" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "C++ namespace operator fix",
+			"scope": "punctuation.separator.namespace.access.cpp",
 			"settings": {
 				"foreground":  "#d61e4c" ,
 				"fontStyle": ""

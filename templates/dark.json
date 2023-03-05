@@ -55,7 +55,6 @@
 		// Editor widget colors
 		"editorSuggestWidget.highlightForeground": __fruity_accent__,
 		"editorSuggestWidget.focusHighlightForeground": __background_default__,
-		"editorSuggestWidget.highlightForeground": __fruity_accent__,
 
 		// Editor gutter
 		"editorGutter.modifiedBackground": __fruity_accent__,
@@ -77,8 +76,15 @@
 		"statusBar.debuggingBackground": __leaf_green__,
     "statusBar.noFolderForeground": __background_default__,
     "statusBar.noFolderBackground": __fruity_accent__,
-    "statusBar.remoteBackground": __leaf_green__,
-    "statusBar.remoteForeground": __background_default__,
+		"statusBar.focusBorder": __text_default__,
+    
+		"statusBarItem.focusBorder": __text_default__,
+		"statusBarItem.remoteBackground": __sky_blue__,
+    "statusBarItem.remoteForeground": __text_default__,
+		"statusBarItem.warningBackground": __background_variant__,
+		"statusBarItem.warningForeground": __fruity_accent__,
+		"statusBarItem.errorBackground": __dead_wood__,
+		"statusBarItem.errorForeground": __background_default__,
 
 		// Breadcrumbs
 		"breadcrumb.focusForeground": __fruity_accent__,
@@ -301,7 +307,50 @@
 		},
 		{
 			"name": "C/C++ builtin types fix",
-			"scope": "storage.type.built-in.primitive.c",
+			"scope": [
+				"storage.type.built-in.primitive.cpp",
+				"storage.type.built-in.primitive.c"
+			],
+			"settings": {
+				"foreground": __fruity_accent__,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "C/C++ macros",
+			"scope": [
+				"meta.preprocessor.c",
+				"entity.name.function.preprocessor.c",
+				"meta.preprocessor.macro.c",
+				"entity.name.function.preprocessor.cpp"
+			],
+			"settings": {
+				"foreground": __sky_blue__,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "C bracket fix",
+			"scope": [
+				"punctuation.separator.pointer-access.c",
+				"punctuation.separator.pointer-access.cpp"
+			],
+			"settings": {
+				"foreground": __fruity_accent__,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "C/C++ access operators fix",
+			"scope": "storage.modifier.array.bracket.square.c",
+			"settings": {
+				"foreground": __text_default__,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "C++ namespace operator fix",
+			"scope": "punctuation.separator.namespace.access.cpp",
 			"settings": {
 				"foreground": __fruity_accent__,
 				"fontStyle": ""

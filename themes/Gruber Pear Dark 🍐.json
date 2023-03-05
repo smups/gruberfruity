@@ -55,7 +55,6 @@
 		// Editor widget colors
 		"editorSuggestWidget.highlightForeground":  "#80cf30" ,
 		"editorSuggestWidget.focusHighlightForeground":  "#181818" ,
-		"editorSuggestWidget.highlightForeground":  "#80cf30" ,
 
 		// Editor gutter
 		"editorGutter.modifiedBackground":  "#80cf30" ,
@@ -77,8 +76,15 @@
 		"statusBar.debuggingBackground":  "#CF59AB" ,
     "statusBar.noFolderForeground":  "#181818" ,
     "statusBar.noFolderBackground":  "#80cf30" ,
-    "statusBar.remoteBackground":  "#CF59AB" ,
-    "statusBar.remoteForeground":  "#181818" ,
+		"statusBar.focusBorder":  "#dddddd" ,
+    
+		"statusBarItem.focusBorder":  "#dddddd" ,
+		"statusBarItem.remoteBackground":  "#00d5ff" ,
+    "statusBarItem.remoteForeground":  "#dddddd" ,
+		"statusBarItem.warningBackground":  "#282828" ,
+		"statusBarItem.warningForeground":  "#80cf30" ,
+		"statusBarItem.errorBackground":  "#938bb7" ,
+		"statusBarItem.errorForeground":  "#181818" ,
 
 		// Breadcrumbs
 		"breadcrumb.focusForeground":  "#80cf30" ,
@@ -301,7 +307,50 @@
 		},
 		{
 			"name": "C/C++ builtin types fix",
-			"scope": "storage.type.built-in.primitive.c",
+			"scope": [
+				"storage.type.built-in.primitive.cpp",
+				"storage.type.built-in.primitive.c"
+			],
+			"settings": {
+				"foreground":  "#80cf30" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "C/C++ macros",
+			"scope": [
+				"meta.preprocessor.c",
+				"entity.name.function.preprocessor.c",
+				"meta.preprocessor.macro.c",
+				"entity.name.function.preprocessor.cpp"
+			],
+			"settings": {
+				"foreground":  "#00d5ff" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "C bracket fix",
+			"scope": [
+				"punctuation.separator.pointer-access.c",
+				"punctuation.separator.pointer-access.cpp"
+			],
+			"settings": {
+				"foreground":  "#80cf30" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "C/C++ access operators fix",
+			"scope": "storage.modifier.array.bracket.square.c",
+			"settings": {
+				"foreground":  "#dddddd" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "C++ namespace operator fix",
+			"scope": "punctuation.separator.namespace.access.cpp",
 			"settings": {
 				"foreground":  "#80cf30" ,
 				"fontStyle": ""
