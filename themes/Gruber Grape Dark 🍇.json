@@ -55,7 +55,6 @@
 		// Editor widget colors
 		"editorSuggestWidget.highlightForeground":  "#bd4dff" ,
 		"editorSuggestWidget.focusHighlightForeground":  "#181818" ,
-		"editorSuggestWidget.highlightForeground":  "#bd4dff" ,
 
 		// Editor gutter
 		"editorGutter.modifiedBackground":  "#bd4dff" ,
@@ -77,8 +76,15 @@
 		"statusBar.debuggingBackground":  "#73c936" ,
     "statusBar.noFolderForeground":  "#181818" ,
     "statusBar.noFolderBackground":  "#bd4dff" ,
-    "statusBar.remoteBackground":  "#73c936" ,
-    "statusBar.remoteForeground":  "#181818" ,
+		"statusBar.focusBorder":  "#dddddd" ,
+    
+		"statusBarItem.focusBorder":  "#dddddd" ,
+		"statusBarItem.remoteBackground":  "#00d5ff" ,
+    "statusBarItem.remoteForeground":  "#dddddd" ,
+		"statusBarItem.warningBackground":  "#282828" ,
+		"statusBarItem.warningForeground":  "#bd4dff" ,
+		"statusBarItem.errorBackground":  "#d16693" ,
+		"statusBarItem.errorForeground":  "#181818" ,
 
 		// Breadcrumbs
 		"breadcrumb.focusForeground":  "#bd4dff" ,
