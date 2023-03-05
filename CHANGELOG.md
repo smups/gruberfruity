@@ -2,6 +2,11 @@
 
 All notable changes to the "gruber fruity" theme pack will be documented here.
 
+## v0.7.2
+Editor:
+- Remote Icon is now visible on new blue background (black font rather than
+white)
+
 ## v0.7.1
 Language support:
 - C support improvements (VSCode)

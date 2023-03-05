@@ -81,7 +81,7 @@
     
 		"statusBarItem.focusBorder":  "#181818" ,
 		"statusBarItem.remoteBackground":  "#0088ff" ,
-    "statusBarItem.remoteForeground":  "#181818" ,
+    "statusBarItem.remoteForeground":  "#fefefe" ,
 		"statusBarItem.warningBackground":  "#efefef" ,
 		"statusBarItem.warningForeground":  "#d61e4c" ,
 		"statusBarItem.errorBackground":  "#938bb7" ,

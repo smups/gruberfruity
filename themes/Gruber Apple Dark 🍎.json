@@ -80,7 +80,7 @@
     
 		"statusBarItem.focusBorder":  "#dddddd" ,
 		"statusBarItem.remoteBackground":  "#00d5ff" ,
-    "statusBarItem.remoteForeground":  "#dddddd" ,
+    "statusBarItem.remoteForeground":  "#181818" ,
 		"statusBarItem.warningBackground":  "#282828" ,
 		"statusBarItem.warningForeground":  "#FF264E" ,
 		"statusBarItem.errorBackground":  "#9e95c7" ,

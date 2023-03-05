@@ -81,7 +81,7 @@
     
 		"statusBarItem.focusBorder": __text_default__,
 		"statusBarItem.remoteBackground": __sky_blue__,
-    "statusBarItem.remoteForeground": __text_default__,
+    "statusBarItem.remoteForeground": __background_default__,
 		"statusBarItem.warningBackground": __background_variant__,
 		"statusBarItem.warningForeground": __fruity_accent__,
 		"statusBarItem.errorBackground": __dead_wood__,
