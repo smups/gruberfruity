@@ -301,7 +301,50 @@
 		},
 		{
 			"name": "C/C++ builtin types fix",
-			"scope": "storage.type.built-in.primitive.c",
+			"scope": [
+				"storage.type.built-in.primitive.cpp",
+				"storage.type.built-in.primitive.c"
+			],
+			"settings": {
+				"foreground":  "#bd4dff" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "C/C++ macros",
+			"scope": [
+				"meta.preprocessor.c",
+				"entity.name.function.preprocessor.c",
+				"meta.preprocessor.macro.c",
+				"entity.name.function.preprocessor.cpp"
+			],
+			"settings": {
+				"foreground":  "#00d5ff" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "C bracket fix",
+			"scope": [
+				"punctuation.separator.pointer-access.c",
+				"punctuation.separator.pointer-access.cpp"
+			],
+			"settings": {
+				"foreground":  "#bd4dff" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "C/C++ access operators fix",
+			"scope": "storage.modifier.array.bracket.square.c",
+			"settings": {
+				"foreground":  "#dddddd" ,
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "C++ namespace operator fix",
+			"scope": "punctuation.separator.namespace.access.cpp",
 			"settings": {
 				"foreground":  "#bd4dff" ,
 				"fontStyle": ""
