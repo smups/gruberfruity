@@ -19,7 +19,7 @@ class GruberFruit:
     def create_theme(self):
         # (1) read the template folder
         output = ""
-        with open(f"{self.template_folder}{self.base}.json", encoding="utf-8") as f:
+        with open(f"{self.template_folder}{self.base}.jsonc", encoding="utf-8") as f:
             output = f.read()
             f.flush()
             
