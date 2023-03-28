@@ -18,8 +18,6 @@
 		"activityBar.foreground":  "#ffa6c9" ,
 		"activityBar.inactiveForeground":  "#dddddd" ,
 
-		// Toolbar
-
 		// Buttons
 		"button.background":  "#ffa6c9" ,
 		"button.foreground":  "#181818" ,
@@ -88,7 +86,11 @@
 
 		// Breadcrumbs
 		"breadcrumb.focusForeground":  "#ffa6c9" ,
-		"breadcrumb.activeSelectionForeground":  "#73c936" 
+		"breadcrumb.activeSelectionForeground":  "#73c936" ,
+
+		// Tabs on the top bar of the editor
+		"tab.activeBorder":  "#ffa6c9" ,
+		"tab.unfocusedActiveBorder":  "#181818" 
 	},
 	"tokenColors": [
 		{

@@ -1,5 +1,5 @@
 {
-	"name": "Gruber Cherry Light 🍒",
+	"name":  "Gruber Olive Light 🫒" ,
 	"colors": {
 		// Base colors
 		"foreground":  "#181818" ,
@@ -18,9 +18,7 @@
 		"activityBar.foreground":  "#6d8c12" ,
 		"activityBar.inactiveForeground":  "#181818" ,
 
-		// Toolbar
-
-		// Buttons
+  	// Buttons
 		"button.background":  "#6d8c12" ,
 		"button.foreground":  "#fefefe" ,
 		"button.hoverBackground":  "#6d8c12" ,
@@ -55,7 +53,6 @@
 		// Editor widget colors
 		"editorSuggestWidget.highlightForeground":  "#6d8c12" ,
 		"editorSuggestWidget.focusHighlightForeground":  "#fefefe" ,
-		"editorSuggestWidget.highlightForeground":  "#6d8c12" ,
 
 		// Editor gutter
 		"editorGutter.modifiedBackground":  "#6d8c12" ,
@@ -89,7 +86,11 @@
 
 		// Breadcrumbs
 		"breadcrumb.focusForeground":  "#6d8c12" ,
-		"breadcrumb.activeSelectionForeground":  "#a21581" 
+		"breadcrumb.activeSelectionForeground":  "#a21581" ,
+		
+		// Tabs on the top bar of the editor
+		"tab.activeBorder":  "#6d8c12" ,
+		"tab.unfocusedActiveBorder":  "#fefefe" 
 	},
 	"tokenColors": [
 		{

@@ -1,4 +1,9 @@
-version = "0.1"
+#  Copyright© 2023 Raúl Wolters(1)
+#
+#  This file is part of gruberfruity and licensed under the terms of the GNU
+#  Public license v3 or higher.
+
+version = "0.2" #see changelog
 colors_folder = "../colors/"
 
 class GruberFruit:
