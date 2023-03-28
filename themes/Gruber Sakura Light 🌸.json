@@ -1,5 +1,5 @@
 {
-	"name": "Gruber Cherry Light 🍒",
+	"name":  "Gruber Sakura Light 🌸" ,
 	"colors": {
 		// Base colors
 		"foreground":  "#181818" ,
@@ -18,9 +18,7 @@
 		"activityBar.foreground":  "#DD68B4" ,
 		"activityBar.inactiveForeground":  "#181818" ,
 
-		// Toolbar
-
-		// Buttons
+  	// Buttons
 		"button.background":  "#DD68B4" ,
 		"button.foreground":  "#fefefe" ,
 		"button.hoverBackground":  "#DD68B4" ,
@@ -55,7 +53,6 @@
 		// Editor widget colors
 		"editorSuggestWidget.highlightForeground":  "#DD68B4" ,
 		"editorSuggestWidget.focusHighlightForeground":  "#fefefe" ,
-		"editorSuggestWidget.highlightForeground":  "#DD68B4" ,
 
 		// Editor gutter
 		"editorGutter.modifiedBackground":  "#DD68B4" ,
@@ -81,7 +78,7 @@
     
 		"statusBarItem.focusBorder":  "#181818" ,
 		"statusBarItem.remoteBackground":  "#0088ff" ,
-    "statusBarItem.remoteForeground":  "#181818" ,
+    "statusBarItem.remoteForeground":  "#fefefe" ,
 		"statusBarItem.warningBackground":  "#efefef" ,
 		"statusBarItem.warningForeground":  "#DD68B4" ,
 		"statusBarItem.errorBackground":  "#938bb7" ,
@@ -89,7 +86,11 @@
 
 		// Breadcrumbs
 		"breadcrumb.focusForeground":  "#DD68B4" ,
-		"breadcrumb.activeSelectionForeground":  "#5caf21" 
+		"breadcrumb.activeSelectionForeground":  "#5caf21" ,
+		
+		// Tabs on the top bar of the editor
+		"tab.activeBorder":  "#DD68B4" ,
+		"tab.unfocusedActiveBorder":  "#fefefe" 
 	},
 	"tokenColors": [
 		{

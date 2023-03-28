@@ -18,9 +18,7 @@
 		"activityBar.foreground": __fruity_accent__,
 		"activityBar.inactiveForeground": __text_default__,
 
-		// Toolbar
-
-		// Buttons
+  	// Buttons
 		"button.background": __fruity_accent__,
 		"button.foreground": __background_default__,
 		"button.hoverBackground": __fruity_accent__,
@@ -50,7 +48,7 @@
 		"editorLineNumber.foreground": __comment__,
 		"editorLineNumber.activeForeground": __fruity_accent__,
 		"editorCursor.foreground": __fruity_accent__,
-		"editor.selectionBackground": "#cccccc22",
+		"editor.selectionBackground": "#18181822",
 
 		// Editor widget colors
 		"editorSuggestWidget.highlightForeground": __fruity_accent__,
@@ -80,7 +78,7 @@
     
 		"statusBarItem.focusBorder": __text_default__,
 		"statusBarItem.remoteBackground": __sky_blue__,
-    "statusBarItem.remoteForeground": __text_default__,
+    "statusBarItem.remoteForeground": __background_default__,
 		"statusBarItem.warningBackground": __background_variant__,
 		"statusBarItem.warningForeground": __fruity_accent__,
 		"statusBarItem.errorBackground": __dead_wood__,
@@ -88,7 +86,11 @@
 
 		// Breadcrumbs
 		"breadcrumb.focusForeground": __fruity_accent__,
-		"breadcrumb.activeSelectionForeground": __leaf_green__
+		"breadcrumb.activeSelectionForeground": __leaf_green__,
+		
+		// Tabs on the top bar of the editor
+		"tab.activeBorder": __fruity_accent__,
+		"tab.unfocusedActiveBorder": __background_default__
 	},
 	"tokenColors": [
 		{
@@ -124,7 +126,9 @@
 				"keyword.other",
 				"keyword.operator.new",
 				"storage.modifier",
-				"storage.type"
+				"storage.type",
+				//java additions
+				"keyword.operator.instanceof.java"
 			],
 			"settings": {
 				"foreground": __fruity_accent__,
@@ -215,8 +219,8 @@
 				"support.type.julia"
 			],
 			"settings": {
-				"foreground": __text_default__,
-				"fontStyle": "underline"
+				"fontStyle": "underline",
+				"foreground": __text_default__
 			}
 		},
 		/*

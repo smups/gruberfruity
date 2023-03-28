@@ -1,4 +1,9 @@
-version = "0.1"
+#  Copyright© 2023 Raúl Wolters(1)
+#
+#  This file is part of gruberfruity and licensed under the terms of the GNU
+#  Public license v3 or higher.
+
+version = "0.2" #see changelog
 colors_folder = "../colors/"
 
 class GruberFruit:
@@ -19,7 +24,7 @@ class GruberFruit:
     def create_theme(self):
         # (1) read the template folder
         output = ""
-        with open(f"{self.template_folder}{self.base}.json", encoding="utf-8") as f:
+        with open(f"{self.template_folder}{self.base}.jsonc", encoding="utf-8") as f:
             output = f.read()
             f.flush()
             

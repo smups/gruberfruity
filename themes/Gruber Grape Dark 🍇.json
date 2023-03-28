@@ -18,8 +18,6 @@
 		"activityBar.foreground":  "#bd4dff" ,
 		"activityBar.inactiveForeground":  "#dddddd" ,
 
-		// Toolbar
-
 		// Buttons
 		"button.background":  "#bd4dff" ,
 		"button.foreground":  "#181818" ,
@@ -80,7 +78,7 @@
     
 		"statusBarItem.focusBorder":  "#dddddd" ,
 		"statusBarItem.remoteBackground":  "#00d5ff" ,
-    "statusBarItem.remoteForeground":  "#dddddd" ,
+    "statusBarItem.remoteForeground":  "#181818" ,
 		"statusBarItem.warningBackground":  "#282828" ,
 		"statusBarItem.warningForeground":  "#bd4dff" ,
 		"statusBarItem.errorBackground":  "#d16693" ,
@@ -88,7 +86,11 @@
 
 		// Breadcrumbs
 		"breadcrumb.focusForeground":  "#bd4dff" ,
-		"breadcrumb.activeSelectionForeground":  "#73c936" 
+		"breadcrumb.activeSelectionForeground":  "#73c936" ,
+
+		// Tabs on the top bar of the editor
+		"tab.activeBorder":  "#bd4dff" ,
+		"tab.unfocusedActiveBorder":  "#181818" 
 	},
 	"tokenColors": [
 		{
