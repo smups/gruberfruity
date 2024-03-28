@@ -81,7 +81,7 @@
     "statusBarItem.remoteForeground":  "#181818" ,
 		"statusBarItem.warningBackground":  "#282828" ,
 		"statusBarItem.warningForeground":  "#bd4dff" ,
-		"statusBarItem.errorBackground":  "#d16693" ,
+		"statusBarItem.errorBackground":  "#9e95c7" ,
 		"statusBarItem.errorForeground":  "#181818" ,
 
 		// Breadcrumbs
@@ -169,7 +169,7 @@
 				"variable.other.constant"
 			],
 			"settings": {
-				"foreground":  "#d16693" 
+				"foreground":  "#9e95c7" 
 			}
 		},
 		{
@@ -254,7 +254,7 @@
 			"name": "Rust lifetime",
 			"scope": "entity.name.type.lifetime",
 			"settings": {
-				"foreground":  "#d16693" ,
+				"foreground":  "#9e95c7" ,
 				"fontStyle": ""
 			}
 		},
@@ -303,7 +303,7 @@
 			"name": "C/C++ hex notation fix",
 			"scope": "keyword.other.unit.hexadecimal",
 			"settings": {
-				"foreground":  "#d16693" ,
+				"foreground":  "#9e95c7" ,
 				"fontStyle": ""
 			}
 		},
@@ -398,7 +398,7 @@
 			"name": "Markup italic",
 			"scope": "markup.italic",
 			"settings": {
-				"foreground":  "#d16693" ,
+				"foreground":  "#9e95c7" ,
 				"fontStyle": "italic"
 			}
 		},
@@ -406,7 +406,7 @@
 			"name": "Markup Bold",
 			"scope": "markup.bold",
 			"settings": {
-				"foreground":  "#d16693" ,
+				"foreground":  "#9e95c7" ,
 				"fontStyle": "bold"
 			}
 		},
@@ -500,7 +500,7 @@
 				"support.constant.color.w3c-standard-color-name.css"
 			],
 			"settings": {
-				"foreground":  "#d16693" ,
+				"foreground":  "#9e95c7" ,
 				"fontStyle": ""
 			}
 		},
@@ -642,7 +642,7 @@
 				"keyword.constant.default.zig"
 			],
 			"settings": {
-				"foreground":  "#d16693" ,
+				"foreground":  "#9e95c7" ,
 				"fontStyle": ""
 			}
 		},

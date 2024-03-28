@@ -2,6 +2,12 @@
 
 All notable changes to the "gruber fruity" theme pack will be documented here.
 
+# v0.8.0
+> _New Helix editor support!_
+
+Theme changes:
+- Gruber Grape Dark 🍇: modified constant color
+
 ## v0.7.3
 Editor:
 - Active tab is now underlined with fruity accent colour
@@ -25,7 +31,7 @@ Editor:
 - Remote Icon now has the sky blue accent colour rather than the default
 - Warning and Error items in the status bar now have nice colours
 
-## v0.7.0
+# v0.7.0
 Language support:
 - added Zig support
     - all Zig keywords are now properly highlighted
@@ -73,13 +79,13 @@ is also bluer this time around.
 - Gruber Apple Dark 🍎 (accent: `#ff264e`): Gruber Apple Dark 🍎 (exact same
 fruity colour) but as a dark theme.
 
-## v0.6.0
+# v0.6.0
 Language support:
 - added Go support
     - all Go keywords are now properly highlighted
     - all built-in Go types are highlighted as types rather than keywords
 
-## v0.5.0
+# v0.5.0
 Language support:
 - added HTML support
 - added CSS support
@@ -87,7 +93,7 @@ Language support:
     - all built-in CSS constants and W3C standard colour names are highlighted as constants
     - CSS class names and ID's are highlighted with the bold fruity accent colour
 
-## v0.4.0
+# v0.4.0
 Two new pink themes:
 - Gruber Sakura Light 🌸 (accent: `#dd68b4`)
 - Gruber Sorbet Dark 🍧 (accent: `#ffa6c9`)
@@ -97,7 +103,7 @@ Language support:
 - Lua now has proper syntax highlighting
 - C/C++ built-in types are no longer marked as keywords
 
-## v0.3.0
+# v0.3.0
 Language support:
 - Julia now has enhanced highlighting:
     - Julia type annotations/hints are now highlighted as such
@@ -128,7 +134,7 @@ theme.
 Language support:
 - added TOML support
 
-## v0.2.0
+# v0.2.0
 Four new themes:
 - Gruber Peach Dark 🍑 (accent: `#fc8d6e`)
 - Gruber Olive Light 🫒 (accent: `#6d8c12`)
@@ -160,5 +166,5 @@ General:
 Language support:
 - JSON identifiers are now given the fruity accent color rather than the leaf green (string) accent color
 
-## v0.1
+# v0.1
 - Initial release
